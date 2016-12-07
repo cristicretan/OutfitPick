@@ -63,6 +63,16 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap back_40 {
+            get {
+                object obj = ResourceManager.GetObject("back 40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backicon40 {
             get {
                 object obj = ResourceManager.GetObject("backicon40", resourceCulture);
@@ -83,9 +93,39 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap garderobe40 {
+            get {
+                object obj = ResourceManager.GetObject("garderobe40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hoodie {
             get {
                 object obj = ResourceManager.GetObject("hoodie", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap io_40 {
+            get {
+                object obj = ResourceManager.GetObject("io 40", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Jacket_170 {
+            get {
+                object obj = ResourceManager.GetObject("Jacket 170", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

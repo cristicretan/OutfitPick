@@ -42,6 +42,7 @@
             // 
             // panel1
             // 
+            this.panel1.BackColor = System.Drawing.Color.Maroon;
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
@@ -52,7 +53,7 @@
             this.panel1.Controls.Add(this.button2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(500, 1100);
+            this.panel1.Size = new System.Drawing.Size(500, 1000);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseEnter += new System.EventHandler(this.panel1_MouseEnter);
@@ -72,11 +73,12 @@
             // 
             // button7
             // 
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Image = global::Clothes_Pick.Properties.Resources.Jacket_170;
             this.button7.Location = new System.Drawing.Point(265, 527);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(220, 220);
             this.button7.TabIndex = 11;
-            this.button7.Text = "jacket";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -95,13 +97,13 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::Clothes_Pick.Properties.Resources.backicon40;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Location = new System.Drawing.Point(12, 12);
+            this.button1.Image = global::Clothes_Pick.Properties.Resources.back_40;
+            this.button1.Location = new System.Drawing.Point(12, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 40);
+            this.button1.Size = new System.Drawing.Size(40, 68);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);

@@ -211,6 +211,18 @@
   <ItemGroup>
     <None Include="Resources\hoodie.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jacket 170.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back 40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\io 40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\garderobe40.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureBclBuildImported" BeforeTargets="BeforeBuild" Condition="'$(BclBuildImported)' == ''">

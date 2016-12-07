@@ -29,13 +29,6 @@ namespace Clothes_Pick
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            Form2 frm = new Form2();
-            frm.Show();
-            this.Hide();
-        }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             GeoCoordinateWatcher watcher = new GeoCoordinateWatcher();
@@ -79,6 +72,15 @@ namespace Clothes_Pick
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form2 frm = new Form2();
+            frm.Show();
+            this.Hide();
         }
     }
 }

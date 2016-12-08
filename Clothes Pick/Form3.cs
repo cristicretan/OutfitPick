@@ -214,7 +214,13 @@ namespace Clothes_Pick
                             }
 
                         }
-                        else MessageBox.Show("Please pick a photo.");
+                        else
+                        {
+                            MessageBox.Show("Please pick a photo.");
+                            Form2 frm = new Form2();
+                            frm.Show();
+                            this.Hide();
+                        }
 
                         break;
                     case 2:
@@ -238,7 +244,13 @@ namespace Clothes_Pick
 
                             }
                         }
-                        else MessageBox.Show("Please pick a photo.");
+                        else
+                        {
+                            MessageBox.Show("Please pick a photo.");
+                            Form2 frm = new Form2();
+                            frm.Show();
+                            this.Hide();
+                        }
 
                         break;
                     case 3:
@@ -266,7 +278,13 @@ namespace Clothes_Pick
                             }
 
                         }
-                        else MessageBox.Show("Please pick a photo.");
+                        else
+                        {
+                            MessageBox.Show("Please pick a photo.");
+                            Form2 frm = new Form2();
+                            frm.Show();
+                            this.Hide();
+                        }
 
                         break;
                     case 4:
@@ -295,6 +313,9 @@ namespace Clothes_Pick
                         else
                         {
                             MessageBox.Show("Please pick a photo.");
+                            Form2 frm = new Form2();
+                            frm.Show();
+                            this.Hide();
                         }
 
                         break;
@@ -322,6 +343,13 @@ namespace Clothes_Pick
                                 pictureBox5.Image = pictureBox1.Image;
 
                             }
+                        }
+                        else
+                        {
+                            MessageBox.Show("Please pick a photo.");
+                            Form2 frm = new Form2();
+                            frm.Show();
+                            this.Hide();
                         }
 
                         break;

@@ -8,18 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Runtime.InteropServices;
+using Clothes_Pick;
 
 namespace OODB
 {
     public partial class Register : Form
     {
         SqlConnection connection = new SqlConnection(Connection.connection_string);
-        
-        string _Username;
-        string _Password;
-        string _Nume;
-        string _Prenume;
-        string _Email;
 
         public Register()
         {
@@ -35,9 +31,17 @@ namespace OODB
             roundedButton1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
         }
 
+        private const int EM_SETCUEBANNER = 0x1501;
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)]string lParam);
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+            set_textbox_watermakrs();
+        }
+
         private void connection_test()
         {
-            // SqlConnection connection = new SqlConnection(connection_string);
             connection.Open();
 
             if (connection.State.Equals(ConnectionState.Open))
@@ -51,17 +55,26 @@ namespace OODB
             connection.Close();
         }
 
+        private void set_textbox_watermakrs()
+        {
+            SendMessage(alphaBlendTextBox1.Handle, EM_SETCUEBANNER, 0, "Username");
+            SendMessage(alphaBlendTextBox2.Handle, EM_SETCUEBANNER, 0, "Password");
+        }
+
         private void insert_database1()
         {
-            _Username = alphaBlendTextBox1.Text;
-            _Password = alphaBlendTextBox2.Text;
-            _Nume = alphaBlendTextBox3.Text;
-            _Prenume = alphaBlendTextBox4.Text;
-            _Email = alphaBlendTextBox5.Text;
+            var salt = Encrypt.GenerateRandomSalt();
+            var _Password = Encrypt.SHA128(Encrypt.SHA128(alphaBlendTextBox2.Text) + salt);
+
+            string _Username = alphaBlendTextBox1.Text;
+            string _Nume = alphaBlendTextBox3.Text;
+            string _Prenume = alphaBlendTextBox4.Text;
+            string _Email = alphaBlendTextBox5.Text;
 
             SqlCommand cmd;
-            string query = "INSERT INTO Clienti(Username,Password,Nume,Prenume,Email) VALUES(@Username,@Password,@Nume,@Prenume,@Email)";
+            string query = "INSERT INTO Clienti(Username,Password,Nume,Prenume,Email,salt) VALUES(@Username,@Password,@Nume,@Prenume,@Email,@salt)";
             cmd = new SqlCommand(query, connection);
+
 
             if (string.IsNullOrEmpty(_Username) || string.IsNullOrEmpty(_Password) || string.IsNullOrEmpty(_Nume) || string.IsNullOrEmpty(_Prenume) || string.IsNullOrEmpty(_Email))
             {
@@ -69,7 +82,15 @@ namespace OODB
             }
             else if (!_Email.Contains("@"))
             {
-                MessageBox.Show("You have to insert a valid email format! ");
+                MessageBox.Show("You have to insert a valid email format! ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (alphaBlendTextBox1.Text.Length < 5)
+            {
+                MessageBox.Show("Please check your username, minimum length is five characters! ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (alphaBlendTextBox2.Text.Length < 6)
+            {
+                MessageBox.Show("Please check your password, minimum length is six characters! ", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
@@ -78,12 +99,13 @@ namespace OODB
                 cmd.Parameters.AddWithValue("@Nume", _Nume);
                 cmd.Parameters.AddWithValue("@Prenume", _Prenume);
                 cmd.Parameters.AddWithValue("@Email", _Email);
+                cmd.Parameters.AddWithValue("@salt", salt);
                 try
                 {
                     connection.Open();
                     if (cmd.ExecuteNonQuery() > 0)
                     {
-                        MessageBox.Show("Account succesfully created!");
+                        MessageBox.Show("Account succesfully created! Now you can log in");
                     }
                     connection.Close();
                 }
@@ -149,5 +171,7 @@ namespace OODB
             roundedButton1.UseVisualStyleBackColor = true;
             roundedButton1.BackColor = Color.Transparent;
         }
+
+        
     }
 }

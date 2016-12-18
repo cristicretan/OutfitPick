@@ -10,13 +10,16 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using System.Data.Sql;
 using Clothes_Pick;
+using System.Runtime.InteropServices;
 
 namespace OODB
 {
     public partial class LogIn : Form
     {
         SqlConnection connection = new SqlConnection(Connection.connection_string);
-        
+        bool login;
+        string salt;
+
 
         public string connection_string { get; private set; }
 
@@ -41,14 +44,18 @@ namespace OODB
             roundedButton2.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
         }
 
+        private const int EM_SETCUEBANNER = 0x1501;
+        [DllImport("user32.dll", CharSet = CharSet.Auto)]
+        private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)]string lParam);
+
         private void LogIn_Load(object sender, EventArgs e)
         {
             connection_init();
+            set_textbox_watermakrs();
         }
+
         private void connection_init()
         {
-
-            SqlConnection connection = new SqlConnection(connection_string);
             connection.Open();
 
             if (connection.State.Equals(ConnectionState.Open))
@@ -62,80 +69,72 @@ namespace OODB
             connection.Close();
         }
 
-        /*
-        private string get_username(string _username)
+        private void set_textbox_watermakrs()
         {
-            connection.Close();
-            string query = "SELECT * FROM Clienti";
-
-            SqlCommand cmd = new SqlCommand(query, connection);
-            connection.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-
-            {
-                _username = reader.GetSqlValue(1).ToString();
-            }
-
-            return _username;
+            SendMessage(alphaBlendTextBox1.Handle, EM_SETCUEBANNER, 0, "Username");
+            SendMessage(alphaBlendTextBox2.Handle, EM_SETCUEBANNER, 0, "Password");
         }
 
-        private string get_passowrd(string _password)
+        private string get_Clienti_salt(string _username)
         {
-            connection.Close();
-            string query = "SELECT * FROM Clienti";
+            string current_Username = alphaBlendTextBox1.Text;
+            string get_Clienti_salt_query = "SELECT salt FROM Clienti WHERE Username='" + current_Username + "'";
+            var cmd = new SqlCommand(get_Clienti_salt_query, connection);
 
-            SqlCommand cmd = new SqlCommand(query, connection);
-            connection.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            while (reader.Read())
-
+            try
             {
-                _password = reader.GetSqlValue(2).ToString();
-            }
+                connection.Open();
 
-            return _password;
+                if (cmd.ExecuteScalar() != null)
+                {
+                    salt = cmd.ExecuteScalar().ToString().Trim();
+                }
+                else
+                {
+                    login = false;
+                    salt = null;
+                }
+            }
+            catch (SqlException ex)
+            {
+                throw ex;
+            }
+            connection.Close();
+            return salt;
         }
-        */
 
         private void validation()
         {
-            string Username;
-            string Password;
 
-            string query = "SELECT * FROM Clienti";
+            string Username = alphaBlendTextBox1.Text;
+            string Password = alphaBlendTextBox2.Text;
+            Password = Encrypt.SHA128(Encrypt.SHA128(alphaBlendTextBox2.Text) + get_Clienti_salt(Username));
+
+
+            string query = "SELECT Username,Password FROM clienti WHERE Username='" + Username + "'" + "AND Password='" + Password + "'";
 
             SqlCommand cmd = new SqlCommand(query, connection);
             connection.Open();
-            SqlDataReader reader = cmd.ExecuteReader();
 
-
-            if (string.IsNullOrEmpty(alphaBlendTextBox1.Text) || string.IsNullOrEmpty(alphaBlendTextBox2.Text))
+            if (cmd.ExecuteScalar() != null)
             {
-                MessageBox.Show("You have to complete user and password fields");
-                return;
+                login = true;
             }
 
-            while (reader.Read())
+            if (login == true)
             {
-                Username = reader.GetSqlString(1).Value.Trim().ToString();
-                Password = reader.GetSqlString(2).Value.Trim().ToString();
-
-                if ((alphaBlendTextBox1.Text == Username) && (Password == alphaBlendTextBox2.Text))
-                {
-                   // MessageBox.Show("Merge");
-                    // LogIn.user = textBox1.Text;
-                    // P1 p1forms = new P1();
-                    //  p1forms.ShowDialog();
-                    Form1 frm = new Form1();
-                    frm.Show();
-                    Hide();
-                }
-
+                Form1 frm = new Form1();
+                frm.Show();
+                this.Hide();
+                connection.Close();
+            }
+            if (!login)
+            {
+                MessageBox.Show("Check your username or password");
             }
         }
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             connection.Close();
@@ -143,6 +142,7 @@ namespace OODB
         }
         private void button3_Click(object sender, EventArgs e)
         {
+            this.Dispose();
             Application.Exit();
         }
 
@@ -150,7 +150,7 @@ namespace OODB
         {
             Form f = new Register();
             f.Show();
-            Hide();
+            this.Hide();
         }
 
         private void roundedButton2_MouseEnter(object sender, EventArgs e)

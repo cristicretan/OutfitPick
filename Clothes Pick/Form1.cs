@@ -48,7 +48,9 @@ namespace Clothes_Pick
 
             RootObject myWeather = await OpenWeatherMapProxy.GetWeather(lat, lon);
 
-            /// MessageBox.Show(((int)myWeather.main.temp).ToString() + "°C" + " " + myWeather.weather[0].description, "Weather For Today", MessageBoxButtons.OK);
+           /// MessageBox.Show(((int)myWeather.main.temp).ToString() + "°C" + " " + myWeather.weather[0].description, "Weather For Today", MessageBoxButtons.OK);
+
+            
         }
 
         public const int WM_NCLBUTTONDOWN = 0xA1;

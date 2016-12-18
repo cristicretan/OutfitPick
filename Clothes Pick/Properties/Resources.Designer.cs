@@ -73,6 +73,26 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroundlogin {
+            get {
+                object obj = ResourceManager.GetObject("backgroundlogin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap backgroundlogin1 {
+            get {
+                object obj = ResourceManager.GetObject("backgroundlogin1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backicon40 {
             get {
                 object obj = ResourceManager.GetObject("backicon40", resourceCulture);
@@ -126,6 +146,26 @@ namespace Clothes_Pick.Properties {
         internal static System.Drawing.Bitmap Jacket_170 {
             get {
                 object obj = ResourceManager.GetObject("Jacket 170", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_Screen_Pick_My_Clothes {
+            get {
+                object obj = ResourceManager.GetObject("Login-Screen-Pick-My-Clothes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Login_Screen_Pick_My_Clothes500 {
+            get {
+                object obj = ResourceManager.GetObject("Login-Screen-Pick-My-Clothes500", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

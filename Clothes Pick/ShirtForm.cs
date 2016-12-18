@@ -219,7 +219,7 @@ namespace Clothes_Pick
                             MessageBox.Show("Please pick a photo.");
                             Form2 frm = new Form2();
                             frm.Show();
-                            this.Hide();
+                            this.Close();
                         }
 
                         break;
@@ -249,7 +249,7 @@ namespace Clothes_Pick
                             MessageBox.Show("Please pick a photo.");
                             Form2 frm = new Form2();
                             frm.Show();
-                            this.Hide();
+                            this.Close();
                         }
 
                         break;
@@ -283,7 +283,7 @@ namespace Clothes_Pick
                             MessageBox.Show("Please pick a photo.");
                             Form2 frm = new Form2();
                             frm.Show();
-                            this.Hide();
+                            this.Close();
                         }
 
                         break;
@@ -315,7 +315,7 @@ namespace Clothes_Pick
                             MessageBox.Show("Please pick a photo.");
                             Form2 frm = new Form2();
                             frm.Show();
-                            this.Hide();
+                            this.Close();
                         }
 
                         break;
@@ -349,7 +349,7 @@ namespace Clothes_Pick
                             MessageBox.Show("Please pick a photo.");
                             Form2 frm = new Form2();
                             frm.Show();
-                            this.Hide();
+                            this.Close();
                         }
 
                         break;

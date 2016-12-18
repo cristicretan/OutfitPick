@@ -23,6 +23,22 @@ namespace OODB
         public LogIn()
         {
             InitializeComponent();
+
+            button3.TabStop = false;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
+
+
+            roundedButton1.TabStop = false;
+            roundedButton1.FlatStyle = FlatStyle.Flat;
+            roundedButton1.FlatAppearance.BorderSize = 0;
+            roundedButton1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
+
+            roundedButton2.TabStop = false;
+            roundedButton2.FlatStyle = FlatStyle.Flat;
+            roundedButton2.FlatAppearance.BorderSize = 0;
+            roundedButton2.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
         }
 
         private void LogIn_Load(object sender, EventArgs e)
@@ -96,7 +112,7 @@ namespace OODB
             SqlDataReader reader = cmd.ExecuteReader();
 
 
-            if (string.IsNullOrEmpty(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text))
+            if (string.IsNullOrEmpty(alphaBlendTextBox1.Text) || string.IsNullOrEmpty(alphaBlendTextBox2.Text))
             {
                 MessageBox.Show("You have to complete user and password fields");
                 return;
@@ -107,7 +123,7 @@ namespace OODB
                 Username = reader.GetSqlString(1).Value.Trim().ToString();
                 Password = reader.GetSqlString(2).Value.Trim().ToString();
 
-                if ((textBox1.Text == Username) && (Password == textBox2.Text))
+                if ((alphaBlendTextBox1.Text == Username) && (Password == alphaBlendTextBox2.Text))
                 {
                    // MessageBox.Show("Merge");
                     // LogIn.user = textBox1.Text;
@@ -127,7 +143,7 @@ namespace OODB
         }
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -135,6 +151,42 @@ namespace OODB
             Form f = new Register();
             f.Show();
             Hide();
+        }
+
+        private void roundedButton2_MouseEnter(object sender, EventArgs e)
+        {
+            roundedButton2.UseVisualStyleBackColor = false;
+            roundedButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, Color.Black);
+        }
+
+        private void roundedButton2_MouseLeave(object sender, EventArgs e)
+        {
+            roundedButton2.UseVisualStyleBackColor = true;
+            roundedButton2.BackColor = Color.Transparent;
+        }
+
+        private void roundedButton1_MouseEnter(object sender, EventArgs e)
+        {
+            roundedButton1.UseVisualStyleBackColor = false;
+            roundedButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, Color.Black);
+        }
+
+        private void roundedButton1_MouseLeave(object sender, EventArgs e)
+        {
+            roundedButton1.UseVisualStyleBackColor = true;
+            roundedButton1.BackColor = Color.Transparent;
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+            alphaBlendTextBox1.Focus();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+            alphaBlendTextBox2.Focus();
         }
     }
 }

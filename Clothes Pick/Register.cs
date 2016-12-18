@@ -24,6 +24,15 @@ namespace OODB
         public Register()
         {
             InitializeComponent();
+            button2.TabStop = false;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
+
+            roundedButton1.TabStop = false;
+            roundedButton1.FlatStyle = FlatStyle.Flat;
+            roundedButton1.FlatAppearance.BorderSize = 0;
+            roundedButton1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
         }
 
         private void connection_test()
@@ -44,11 +53,11 @@ namespace OODB
 
         private void insert_database1()
         {
-            _Username = textBox1.Text;
-            _Password = textBox2.Text;
-            _Nume = textBox3.Text;
-            _Prenume = textBox4.Text;
-            _Email = textBox5.Text;
+            _Username = alphaBlendTextBox1.Text;
+            _Password = alphaBlendTextBox2.Text;
+            _Nume = alphaBlendTextBox3.Text;
+            _Prenume = alphaBlendTextBox4.Text;
+            _Email = alphaBlendTextBox5.Text;
 
             SqlCommand cmd;
             string query = "INSERT INTO Clienti(Username,Password,Nume,Prenume,Email) VALUES(@Username,@Password,@Nume,@Prenume,@Email)";
@@ -97,6 +106,48 @@ namespace OODB
             LogIn frm = new LogIn();
             frm.Show();
             Hide();
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            label6.Visible = false;
+            alphaBlendTextBox1.Focus();
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            label1.Visible = false;
+            alphaBlendTextBox2.Focus();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+            alphaBlendTextBox3.Focus();
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+            label7.Visible = false;
+            alphaBlendTextBox4.Focus();
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+            label8.Visible = false;
+            alphaBlendTextBox5.Focus();
+        }
+
+        private void roundedButton1_MouseEnter(object sender, EventArgs e)
+        {
+            roundedButton1.UseVisualStyleBackColor = false;
+            roundedButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, Color.Black);
+        }
+
+        private void roundedButton1_MouseLeave(object sender, EventArgs e)
+        {
+            roundedButton1.UseVisualStyleBackColor = true;
+            roundedButton1.BackColor = Color.Transparent;
         }
     }
 }

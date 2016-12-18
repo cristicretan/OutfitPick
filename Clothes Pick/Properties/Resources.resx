@@ -127,11 +127,14 @@
   <data name="shirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shirt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="backicon40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backicon40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="garderobe40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garderobe40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="io 40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\io 40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backgroundlogin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundlogin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hoodie" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hoodie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,17 +145,26 @@
   <data name="pants" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\pants.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="pantsnew" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pantsnew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="shutdown40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shutdown40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Jacket 170" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jacket 170.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="shutdown40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shutdown40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="pantsnew" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pantsnew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login-Screen-Pick-My-Clothes500" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login-Screen-Pick-My-Clothes500.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backicon40" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backicon40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="back 40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\back 40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Login-Screen-Pick-My-Clothes" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Login-Screen-Pick-My-Clothes.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="sweater" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sweater.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,7 +172,7 @@
   <data name="shirt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shirt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="garderobe40" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\garderobe40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="backgroundlogin1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backgroundlogin1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

@@ -28,101 +28,127 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LogIn));
             this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.alphaBlendTextBox1 = new ZBobb.AlphaBlendTextBox();
+            this.alphaBlendTextBox2 = new ZBobb.AlphaBlendTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.roundedButton2 = new Clothes_Pick.RoundedButton();
+            this.roundedButton1 = new Clothes_Pick.RoundedButton();
             this.SuspendLayout();
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(298, 260);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(50, 40);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Login";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(165, 164);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(183, 20);
-            this.textBox1.TabIndex = 2;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(163, 200);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(185, 20);
-            this.textBox2.TabIndex = 3;
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.SystemColors.Control;
+            this.button3.ForeColor = System.Drawing.Color.Transparent;
             this.button3.Image = global::Clothes_Pick.Properties.Resources.io_40;
             this.button3.Location = new System.Drawing.Point(11, 11);
             this.button3.Margin = new System.Windows.Forms.Padding(2);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(40, 40);
             this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // alphaBlendTextBox1
             // 
-            this.button2.Location = new System.Drawing.Point(180, 260);
-            this.button2.Margin = new System.Windows.Forms.Padding(2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(60, 40);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Register";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.alphaBlendTextBox1.BackAlpha = 10;
+            this.alphaBlendTextBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.alphaBlendTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.alphaBlendTextBox1.Font = new System.Drawing.Font("Verdana", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.alphaBlendTextBox1.ForeColor = System.Drawing.Color.Gray;
+            this.alphaBlendTextBox1.Location = new System.Drawing.Point(11, 260);
+            this.alphaBlendTextBox1.Name = "alphaBlendTextBox1";
+            this.alphaBlendTextBox1.Size = new System.Drawing.Size(474, 30);
+            this.alphaBlendTextBox1.TabIndex = 12;
+            // 
+            // alphaBlendTextBox2
+            // 
+            this.alphaBlendTextBox2.BackAlpha = 10;
+            this.alphaBlendTextBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.alphaBlendTextBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.alphaBlendTextBox2.Font = new System.Drawing.Font("Verdana", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel, ((byte)(0)));
+            this.alphaBlendTextBox2.ForeColor = System.Drawing.Color.Gray;
+            this.alphaBlendTextBox2.Location = new System.Drawing.Point(11, 295);
+            this.alphaBlendTextBox2.Name = "alphaBlendTextBox2";
+            this.alphaBlendTextBox2.PasswordChar = '*';
+            this.alphaBlendTextBox2.Size = new System.Drawing.Size(474, 32);
+            this.alphaBlendTextBox2.TabIndex = 13;
+            this.alphaBlendTextBox2.UseSystemPasswordChar = true;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(106, 164);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Verdana", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(11, 260);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 13);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "Username";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.Size = new System.Drawing.Size(155, 31);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "USERNAME";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(106, 203);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Verdana", 18.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(11, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Password";
+            this.label2.Size = new System.Drawing.Size(160, 31);
+            this.label2.TabIndex = 15;
+            this.label2.Text = "PASSWORD";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // roundedButton2
+            // 
+            this.roundedButton2.BackColor = System.Drawing.Color.Transparent;
+            this.roundedButton2.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton2.ForeColor = System.Drawing.Color.SpringGreen;
+            this.roundedButton2.Location = new System.Drawing.Point(12, 433);
+            this.roundedButton2.Name = "roundedButton2";
+            this.roundedButton2.Size = new System.Drawing.Size(476, 55);
+            this.roundedButton2.TabIndex = 9;
+            this.roundedButton2.Text = "REGISTER";
+            this.roundedButton2.UseVisualStyleBackColor = false;
+            this.roundedButton2.Click += new System.EventHandler(this.button2_Click);
+            this.roundedButton2.MouseEnter += new System.EventHandler(this.roundedButton2_MouseEnter);
+            this.roundedButton2.MouseLeave += new System.EventHandler(this.roundedButton2_MouseLeave);
+            // 
+            // roundedButton1
+            // 
+            this.roundedButton1.BackColor = System.Drawing.Color.Transparent;
+            this.roundedButton1.Font = new System.Drawing.Font("Verdana", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.roundedButton1.ForeColor = System.Drawing.Color.SpringGreen;
+            this.roundedButton1.Location = new System.Drawing.Point(11, 372);
+            this.roundedButton1.Name = "roundedButton1";
+            this.roundedButton1.Size = new System.Drawing.Size(476, 55);
+            this.roundedButton1.TabIndex = 8;
+            this.roundedButton1.Text = "LOGIN";
+            this.roundedButton1.UseVisualStyleBackColor = false;
+            this.roundedButton1.Click += new System.EventHandler(this.button1_Click);
+            this.roundedButton1.MouseEnter += new System.EventHandler(this.roundedButton1_MouseEnter);
+            this.roundedButton1.MouseLeave += new System.EventHandler(this.roundedButton1_MouseLeave);
             // 
             // LogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = global::Clothes_Pick.Properties.Resources.backgroundlogin1;
             this.ClientSize = new System.Drawing.Size(500, 500);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.alphaBlendTextBox2);
+            this.Controls.Add(this.alphaBlendTextBox1);
+            this.Controls.Add(this.roundedButton2);
+            this.Controls.Add(this.roundedButton1);
             this.Controls.Add(this.button3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "LogIn";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -133,12 +159,11 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private Clothes_Pick.RoundedButton roundedButton1;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
+        private Clothes_Pick.RoundedButton roundedButton2;
+        private ZBobb.AlphaBlendTextBox alphaBlendTextBox1;
+        private ZBobb.AlphaBlendTextBox alphaBlendTextBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
     }

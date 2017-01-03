@@ -35,6 +35,9 @@
   <PropertyGroup>
     <ApplicationIcon>Clothes-Pick-Icon.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge, Version=2.2.5.0, Culture=neutral, PublicKeyToken=c1db6ff4eaa06aeb, processorArchitecture=MSIL">
       <HintPath>..\packages\AForge.2.2.5\lib\AForge.dll</HintPath>
@@ -116,6 +119,7 @@
     <Compile Include="JacketForm.Designer.cs">
       <DependentUpon>JacketForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="ListArticle.cs" />
     <Compile Include="LogIn.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +136,11 @@
     <Compile Include="PictureAnalysis.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Register.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -185,14 +194,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,21 +221,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\shutdown40.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backicon40.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pants.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\pants1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\shirt.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\pantsnew.png" />
   </ItemGroup>
   <ItemGroup>
@@ -253,24 +242,18 @@
     <None Include="Resources\Jacket 170.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\back 40.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\io 40.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\garderobe40.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\backgroundlogin.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Clothes-Pick-Icon.ico" />
     <Content Include="logo.ico" />
     <Content Include="logo1.ico" />
-    <None Include="Resources\backgroundlogin1.png" />
-    <None Include="Resources\Login-Screen-Pick-My-Clothes500.png" />
-    <None Include="Resources\Login-Screen-Pick-My-Clothes.png" />
+    <None Include="Resources\onlylogo1.png" />
+    <None Include="Resources\io 40i.png" />
+    <None Include="Resources\back140i.png" />
+    <None Include="Resources\back140i.bmp" />
+    <None Include="Resources\garderobe40i.png" />
+    <None Include="Resources\gradientotherforms.png" />
+    <None Include="Resources\backphoto.png" />
+    <None Include="Resources\onlylogo200sharpi1.png" />
+    <None Include="Resources\shutdown40.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

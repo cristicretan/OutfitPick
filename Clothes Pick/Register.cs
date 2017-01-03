@@ -20,25 +20,25 @@ namespace OODB
         public Register()
         {
             InitializeComponent();
+
             button2.TabStop = false;
             button2.FlatStyle = FlatStyle.Flat;
             button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
             button2.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
 
             roundedButton1.TabStop = false;
             roundedButton1.FlatStyle = FlatStyle.Flat;
             roundedButton1.FlatAppearance.BorderSize = 0;
             roundedButton1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
+            roundedButton1.FlatAppearance.MouseDownBackColor = Color.FromArgb(68, 102, 85);
+            roundedButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(70, 68, 102, 85);
         }
 
         private const int EM_SETCUEBANNER = 0x1501;
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)]string lParam);
-
-        private void Register_Load(object sender, EventArgs e)
-        {
-            set_textbox_watermakrs();
-        }
 
         private void connection_test()
         {
@@ -53,12 +53,6 @@ namespace OODB
                 MessageBox.Show("Connection error");
             }
             connection.Close();
-        }
-
-        private void set_textbox_watermakrs()
-        {
-            SendMessage(alphaBlendTextBox1.Handle, EM_SETCUEBANNER, 0, "Username");
-            SendMessage(alphaBlendTextBox2.Handle, EM_SETCUEBANNER, 0, "Password");
         }
 
         private void insert_database1()
@@ -126,6 +120,7 @@ namespace OODB
         private void button2_Click(object sender, EventArgs e)
         {
             LogIn frm = new LogIn();
+            frm.SetDesktopLocation(this.Left, this.Top);
             frm.Show();
             Hide();
         }
@@ -160,18 +155,22 @@ namespace OODB
             alphaBlendTextBox5.Focus();
         }
 
-        private void roundedButton1_MouseEnter(object sender, EventArgs e)
-        {
-            roundedButton1.UseVisualStyleBackColor = false;
-            roundedButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, Color.Black);
-        }
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
 
-        private void roundedButton1_MouseLeave(object sender, EventArgs e)
-        {
-            roundedButton1.UseVisualStyleBackColor = true;
-            roundedButton1.BackColor = Color.Transparent;
-        }
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd,
+                         int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
 
-        
+        private void Register_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
     }
 }

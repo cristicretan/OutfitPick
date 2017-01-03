@@ -463,8 +463,11 @@ namespace Clothes_Pick
                                    + (c1.G - c2.G) * (c1.G - c2.G)
                                    + (c1.B - c2.B) * (c1.B - c2.B));
         }
+              
+        int tshirt_number = 0;
 
-        private static void GetDominantColor(string inputFile, int k, int NumberOfClicks)
+
+        private void GetDominantColor(string inputFile, int k, int NumberOfClicks)
         {
             using (Image image = Image.FromFile(inputFile))
             {
@@ -497,6 +500,9 @@ namespace Clothes_Pick
                     foreach (Color color in dominantColours)
                     {
                         MessageBox.Show(closestColor2(clist, color));
+                        tshirt_number++;
+                        Program.Buffer.Clothes.Add("T-shirt " + tshirt_number.ToString());
+                        Program.Buffer.Colors.Add(closestColor2(clist, color));
                         Console.WriteLine("K: {0} (#{1:x2}{2:x2}{3:x2})", color, color.R, color.G, color.B);
                         string hex = color.R.ToString("X2") + color.G.ToString("X2") + color.B.ToString("X2");
                     }

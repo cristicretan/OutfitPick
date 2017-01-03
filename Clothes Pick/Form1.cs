@@ -22,15 +22,33 @@ namespace Clothes_Pick
 
         public bool button2clicked = true;
 
+        public bool firstload = false;
+
         public static string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\";
 
         public Form1()
         {
             InitializeComponent();
+
+            button4.TabStop = false;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
+            button2.TabStop = false;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            firstload = true;
+
             GeoCoordinateWatcher watcher = new GeoCoordinateWatcher();
             watcher.PositionChanged += watcher_PositionChanged;
             watcher.Start();
@@ -39,6 +57,7 @@ namespace Clothes_Pick
             path += @"\Gallery\";
 
             if (!Directory.Exists(path)) Directory.CreateDirectory(path);
+
         }
 
         private async void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
@@ -76,13 +95,33 @@ namespace Clothes_Pick
             Application.Exit();
         }
 
-        
-
         private void button2_Click(object sender, EventArgs e)
         {
             Form2 frm = new Form2();
             frm.Show();
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                foreach(string c in Program.Buffer.Clothes)
+                {
+                    MessageBox.Show(c);
+                }
+                foreach(string c in Program.Buffer.Colors)
+                {
+                    MessageBox.Show(c);
+                }
+            }
+
+            catch when(Program.Buffer == null)
+            {
+                MessageBox.Show("Articles is null.");
+            }
+        }
+
     }
 }

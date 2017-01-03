@@ -9,6 +9,9 @@ namespace Clothes_Pick
 {
     static class Program
     {
+
+        public static ListArticle Buffer = new ListArticle();
+
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

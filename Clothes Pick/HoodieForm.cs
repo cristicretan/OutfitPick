@@ -409,7 +409,62 @@ namespace Clothes_Pick
             pictureBox5.Image = image;
         }
 
-        private static void GetDominantColor(string inputFile, int k, int NumberOfClicks)
+        // List of Colors
+        static List<Color> clist = new List<Color>()
+        {
+            Color.Black,
+            Color.FromArgb(204, 102, 0), Color.Brown, Color.FromArgb(49, 17, 4),
+            Color.LightBlue, Color.Blue, Color.DarkBlue,
+            Color.LightGreen, Color.Green, Color.DarkGreen,
+            Color.FromArgb(228, 114, 151), Color.Red, Color.DarkRed,
+            Color.LightYellow, Color.Yellow, Color.FromArgb(205, 149, 12),
+            Color.LightGray, Color.Gray, Color.DarkGray,
+            Color.FromArgb(144, 116, 225), Color.Indigo, Color.FromArgb(55, 43, 82),
+            Color.FromArgb(255,192,76), Color.Orange, Color.DarkOrange,
+            Color.LightPink, Color.Pink, Color.FromArgb(153,115,121),
+            Color.LightCyan, Color.Cyan, Color.DarkCyan,
+            Color.FromArgb(231,205,171), Color.FromArgb(222,184,135), Color.FromArgb(177,147,108),
+            Color.White
+        };
+
+
+        // List Of Color Names
+        static List<string> cnlist = new List<string>
+        {
+            "Black",
+            "Light Brown","Brown", "Dark Brown",
+            "Light Blue", "Blue", "Dark Blue",
+            "Light Green", "Green", "Dark Green",
+            "Light Red", "Red", "Dark Red",
+            "Light Yellow", "Yellow", "Dark Yellow",
+            "Light Gray", "Gray", "Dark Gray",
+            "Light Indigo", "Indigo", "Dark Indigo",
+            "Light Orange", "Orange", "Dark Orange",
+            "Light Pink", "Pink", "Dark Pink",
+            "Light Cyan", "Cyan", "Dark Cyan",
+            "Light Beige", "Beige", "Dark Beige",
+            "White"
+        };
+
+        //Get the Closest Color.
+        static string closestColor2(List<Color> colors, Color target)
+        {
+            var colorDiffs = colors.Select(n => ColorDiff(n, target)).Min(n => n);
+            int x = colors.FindIndex(n => ColorDiff(n, target) == colorDiffs);
+            return cnlist[x];
+        }
+
+        //Distance in RGB Space
+        static int ColorDiff(Color c1, Color c2)
+        {
+            return (int)Math.Sqrt((c1.R - c2.R) * (c1.R - c2.R)
+                                   + (c1.G - c2.G) * (c1.G - c2.G)
+                                   + (c1.B - c2.B) * (c1.B - c2.B));
+        }
+
+        int article_number = 0;
+
+        private void GetDominantColor(string inputFile, int k, int NumberOfClicks)
         {
             using (Image image = Image.FromFile(inputFile))
             {
@@ -441,9 +496,11 @@ namespace Clothes_Pick
                     Console.WriteLine("Dominant colours for {0}:", inputFile);
                     foreach (Color color in dominantColours)
                     {
+                        article_number++;
+                        Program.Buffer.Clothes.Add("Sweater " + article_number.ToString());
+                        Program.Buffer.Colors.Add(closestColor2(clist, color));
                         Console.WriteLine("K: {0} (#{1:x2}{2:x2}{3:x2})", color, color.R, color.G, color.B);
                         string hex = color.R.ToString("X2") + color.G.ToString("X2") + color.B.ToString("X2");
-                        MessageBox.Show(hex);
                     }
 
                     const int swatchHeight = 20;
@@ -489,7 +546,7 @@ namespace Clothes_Pick
                 string filename = path1 + "image" + NumberOfClick.ToString() + "cropped.png";
                 string filep = path1 + "image" + NumberOfClick.ToString() + "cropped.png";
 
-                GetDominantColor(filep, 3, NumberOfClick);
+                GetDominantColor(filep, 1, NumberOfClick);
 
 
                 if (File.Exists(filename))

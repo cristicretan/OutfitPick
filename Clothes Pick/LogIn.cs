@@ -19,7 +19,7 @@ namespace OODB
         SqlConnection connection = new SqlConnection(Connection.connection_string);
         bool login;
         string salt;
-
+        private bool isPostBack = true;
 
         public string connection_string { get; private set; }
 
@@ -27,31 +27,44 @@ namespace OODB
         {
             InitializeComponent();
 
+            isPostBack = false;
+
             button3.TabStop = false;
             button3.FlatStyle = FlatStyle.Flat;
             button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
             button3.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
-
 
             roundedButton1.TabStop = false;
             roundedButton1.FlatStyle = FlatStyle.Flat;
             roundedButton1.FlatAppearance.BorderSize = 0;
             roundedButton1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
+            roundedButton1.FlatAppearance.MouseDownBackColor = Color.FromArgb(68, 102, 85);
+            roundedButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(70, 68, 102, 85);
 
-            roundedButton2.TabStop = false;
-            roundedButton2.FlatStyle = FlatStyle.Flat;
-            roundedButton2.FlatAppearance.BorderSize = 0;
-            roundedButton2.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
+            label5.BackColor = Color.FromArgb(30, 0, 0, 0);
+
+            if (!isPostBack) this.CenterToScreen();
+
         }
 
         private const int EM_SETCUEBANNER = 0x1501;
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         private static extern Int32 SendMessage(IntPtr hWnd, int msg, int wParam, [MarshalAs(UnmanagedType.LPWStr)]string lParam);
 
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImportAttribute("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd,
+                         int Msg, int wParam, int lParam);
+        [DllImportAttribute("user32.dll")]
+        public static extern bool ReleaseCapture();
+
         private void LogIn_Load(object sender, EventArgs e)
         {
             connection_init();
-            set_textbox_watermakrs();
         }
 
         private void connection_init()
@@ -67,12 +80,6 @@ namespace OODB
                 MessageBox.Show("Connection error");
             }
             connection.Close();
-        }
-
-        private void set_textbox_watermakrs()
-        {
-            SendMessage(alphaBlendTextBox1.Handle, EM_SETCUEBANNER, 0, "Username");
-            SendMessage(alphaBlendTextBox2.Handle, EM_SETCUEBANNER, 0, "Password");
         }
 
         private string get_Clienti_salt(string _username)
@@ -149,20 +156,9 @@ namespace OODB
         private void button2_Click(object sender, EventArgs e)
         {
             Form f = new Register();
+            f.SetDesktopLocation(this.Left, this.Top);
             f.Show();
             this.Hide();
-        }
-
-        private void roundedButton2_MouseEnter(object sender, EventArgs e)
-        {
-            roundedButton2.UseVisualStyleBackColor = false;
-            roundedButton2.FlatAppearance.MouseOverBackColor = Color.FromArgb(100, Color.Black);
-        }
-
-        private void roundedButton2_MouseLeave(object sender, EventArgs e)
-        {
-            roundedButton2.UseVisualStyleBackColor = true;
-            roundedButton2.BackColor = Color.Transparent;
         }
 
         private void roundedButton1_MouseEnter(object sender, EventArgs e)
@@ -177,16 +173,25 @@ namespace OODB
             roundedButton1.BackColor = Color.Transparent;
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void LogIn_MouseDown(object sender, MouseEventArgs e)
         {
-            label1.Visible = false;
-            alphaBlendTextBox1.Focus();
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
         }
 
-        private void label2_Click(object sender, EventArgs e)
+        private void label4_MouseEnter(object sender, EventArgs e)
         {
-            label2.Visible = false;
-            alphaBlendTextBox2.Focus();
+            label4.Font = new Font(label4.Font, FontStyle.Underline);
+            label4.ForeColor = Color.FromArgb(68, 102, 85);
+        }
+
+        private void label4_MouseLeave(object sender, EventArgs e)
+        {
+            label4.Font = new Font(label4.Font, FontStyle.Regular);
+            label4.ForeColor = Color.White;
         }
     }
 }

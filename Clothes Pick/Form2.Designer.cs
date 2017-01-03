@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.panel1 = new Clothes_Pick.ScrollablePanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -43,7 +44,9 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.BackgroundImage = global::Clothes_Pick.Properties.Resources.gradientotherforms;
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button8);
             this.panel1.Controls.Add(this.button7);
             this.panel1.Controls.Add(this.button6);
@@ -55,15 +58,26 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(492, 530);
+            this.panel1.Size = new System.Drawing.Size(480, 640);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(130, 784);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 13;
+            this.label1.Text = "label1";
+            this.label1.Visible = false;
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button8.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.button8.BackColor = System.Drawing.Color.Transparent;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Image = global::Clothes_Pick.Properties.Resources.hoodie;
-            this.button8.Location = new System.Drawing.Point(144, 753);
+            this.button8.Location = new System.Drawing.Point(130, 774);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(220, 220);
             this.button8.TabIndex = 12;
@@ -72,21 +86,22 @@
             // 
             // button7
             // 
+            this.button7.BackColor = System.Drawing.Color.Transparent;
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Image = global::Clothes_Pick.Properties.Resources.Jacket_170;
-            this.button7.Location = new System.Drawing.Point(265, 527);
+            this.button7.Image = global::Clothes_Pick.Properties.Resources.Jacket170;
+            this.button7.Location = new System.Drawing.Point(248, 547);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(220, 220);
             this.button7.TabIndex = 11;
-            this.button7.UseVisualStyleBackColor = true;
+            this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button6.BackColor = System.Drawing.Color.Transparent;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Image = global::Clothes_Pick.Properties.Resources.coat;
-            this.button6.Location = new System.Drawing.Point(20, 527);
+            this.button6.Location = new System.Drawing.Point(12, 547);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(220, 220);
             this.button6.TabIndex = 10;
@@ -95,24 +110,24 @@
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button1.Image = global::Clothes_Pick.Properties.Resources.back_40;
-            this.button1.Location = new System.Drawing.Point(12, 3);
+            this.button1.Image = global::Clothes_Pick.Properties.Resources.back140i;
+            this.button1.Location = new System.Drawing.Point(12, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(40, 68);
+            this.button1.Size = new System.Drawing.Size(40, 40);
             this.button1.TabIndex = 5;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button4
             // 
-            this.button4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button4.BackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Image = global::Clothes_Pick.Properties.Resources.shirt1;
-            this.button4.Location = new System.Drawing.Point(265, 301);
+            this.button4.Location = new System.Drawing.Point(248, 321);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(220, 220);
             this.button4.TabIndex = 8;
@@ -121,21 +136,22 @@
             // 
             // button5
             // 
+            this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Image = global::Clothes_Pick.Properties.Resources.sweater;
-            this.button5.Location = new System.Drawing.Point(20, 301);
+            this.button5.Location = new System.Drawing.Point(12, 321);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(220, 220);
             this.button5.TabIndex = 9;
-            this.button5.UseVisualStyleBackColor = true;
+            this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button3
             // 
-            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.button3.BackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Image = global::Clothes_Pick.Properties.Resources.pantsnew;
-            this.button3.Location = new System.Drawing.Point(20, 75);
+            this.button3.Location = new System.Drawing.Point(12, 95);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(220, 220);
             this.button3.TabIndex = 7;
@@ -144,21 +160,22 @@
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Clothes_Pick.Properties.Resources.T_shirt;
-            this.button2.Location = new System.Drawing.Point(265, 75);
+            this.button2.Location = new System.Drawing.Point(248, 95);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(220, 220);
             this.button2.TabIndex = 6;
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.ClientSize = new System.Drawing.Size(492, 530);
+            this.BackColor = System.Drawing.Color.Silver;
+            this.ClientSize = new System.Drawing.Size(480, 640);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -167,6 +184,7 @@
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -182,5 +200,6 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label1;
     }
 }

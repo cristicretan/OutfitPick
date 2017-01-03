@@ -16,11 +16,60 @@ namespace Clothes_Pick
         public Form2()
         {
             InitializeComponent();
+
+            button1.TabStop = false;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button1.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
+            button2.TabStop = false;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 2;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button2.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
+            button3.TabStop = false;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.FlatAppearance.BorderSize = 2;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button3.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
+            button4.TabStop = false;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.FlatAppearance.BorderSize = 2;
+            button4.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button4.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
+            button5.TabStop = false;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.FlatAppearance.BorderSize = 2;
+            button5.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button5.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
+            button6.TabStop = false;
+            button6.FlatStyle = FlatStyle.Flat;
+            button6.FlatAppearance.BorderSize = 2;
+            button6.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button6.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
+            button7.TabStop = false;
+            button7.FlatStyle = FlatStyle.Flat;
+            button7.FlatAppearance.BorderSize = 2;
+            button7.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button7.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
+            button8.TabStop = false;
+            button8.FlatStyle = FlatStyle.Flat;
+            button8.FlatAppearance.BorderSize = 2;
+            button8.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+            button8.FlatAppearance.MouseDownBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            panel1.Focus();
+            
         }
 
         Form1 frm = new Form1();

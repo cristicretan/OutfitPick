@@ -63,9 +63,9 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap back_40 {
+        internal static System.Drawing.Bitmap back140i {
             get {
-                object obj = ResourceManager.GetObject("back 40", resourceCulture);
+                object obj = ResourceManager.GetObject("back140i", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,29 +73,9 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap backgroundlogin {
+        internal static System.Drawing.Bitmap backphoto {
             get {
-                object obj = ResourceManager.GetObject("backgroundlogin", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap backgroundlogin1 {
-            get {
-                object obj = ResourceManager.GetObject("backgroundlogin1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap backicon40 {
-            get {
-                object obj = ResourceManager.GetObject("backicon40", resourceCulture);
+                object obj = ResourceManager.GetObject("backphoto", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +93,19 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap garderobe40 {
+        internal static System.Drawing.Bitmap garderobe40i {
             get {
-                object obj = ResourceManager.GetObject("garderobe40", resourceCulture);
+                object obj = ResourceManager.GetObject("garderobe40i", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap gradientotherforms {
+            get {
+                object obj = ResourceManager.GetObject("gradientotherforms", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +123,9 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap io_40 {
+        internal static System.Drawing.Bitmap io_40i {
             get {
-                object obj = ResourceManager.GetObject("io 40", resourceCulture);
+                object obj = ResourceManager.GetObject("io_40i", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +133,9 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Jacket_170 {
+        internal static System.Drawing.Bitmap Jacket170 {
             get {
-                object obj = ResourceManager.GetObject("Jacket 170", resourceCulture);
+                object obj = ResourceManager.GetObject("Jacket170", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +143,9 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Login_Screen_Pick_My_Clothes {
+        internal static System.Drawing.Bitmap onlylogo1 {
             get {
-                object obj = ResourceManager.GetObject("Login-Screen-Pick-My-Clothes", resourceCulture);
+                object obj = ResourceManager.GetObject("onlylogo1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,29 +153,9 @@ namespace Clothes_Pick.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Login_Screen_Pick_My_Clothes500 {
+        internal static System.Drawing.Bitmap onlylogo200sharpi1 {
             get {
-                object obj = ResourceManager.GetObject("Login-Screen-Pick-My-Clothes500", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pants {
-            get {
-                object obj = ResourceManager.GetObject("pants", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap pants1 {
-            get {
-                object obj = ResourceManager.GetObject("pants1", resourceCulture);
+                object obj = ResourceManager.GetObject("onlylogo200sharpi1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -196,16 +166,6 @@ namespace Clothes_Pick.Properties {
         internal static System.Drawing.Bitmap pantsnew {
             get {
                 object obj = ResourceManager.GetObject("pantsnew", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap shirt {
-            get {
-                object obj = ResourceManager.GetObject("shirt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -245,7 +205,7 @@ namespace Clothes_Pick.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap T_shirt {
             get {
-                object obj = ResourceManager.GetObject("T-shirt", resourceCulture);
+                object obj = ResourceManager.GetObject("T_shirt", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

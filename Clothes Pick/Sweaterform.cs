@@ -49,6 +49,8 @@ namespace Clothes_Pick
 
         public static string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Sweaters\";
 
+        public static string path2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Sweaters\Cropped";
+
 
         public Sweaterform()
         {
@@ -388,9 +390,12 @@ namespace Clothes_Pick
         private void Sweaterform_Load(object sender, EventArgs e)
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string path2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
             path += @"\Gallery\Sweaters\";
+            path2 += @"\Gallery\Sweaters\Cropped";
 
             if (!Directory.Exists(path)) Directory.CreateDirectory(path);
+            if (!Directory.Exists(path1)) Directory.CreateDirectory(path1);
 
             videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
@@ -542,10 +547,10 @@ namespace Clothes_Pick
 
                 if (SelectedArea == null) return;
 
-                SelectedArea.Save(path1 + "image" + NumberOfClick.ToString() + "cropped.png", ImageFormat.Png);
+                SelectedArea.Save(path2 + "image" + NumberOfClick.ToString() + "cropped.png", ImageFormat.Png);
 
-                string filename = path1 + "image" + NumberOfClick.ToString() + "cropped.png";
-                string filep = path1 + "image" + NumberOfClick.ToString() + "cropped.png";
+                string filename = path2 + "image" + NumberOfClick.ToString() + "cropped.png";
+                string filep = path2 + "image" + NumberOfClick.ToString() + "cropped.png";
 
                 GetDominantColor(filep, 1, NumberOfClick);
 

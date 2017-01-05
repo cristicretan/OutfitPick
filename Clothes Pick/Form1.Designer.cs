@@ -48,13 +48,14 @@
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.White;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Location = new System.Drawing.Point(164, 301);
+            this.button3.Location = new System.Drawing.Point(164, 293);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(153, 55);
             this.button3.TabIndex = 2;
             this.button3.Text = "Pick My Clothes";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
@@ -73,8 +74,8 @@
             // 
             this.BackgroundImage = global::Clothes_Pick.Properties.Resources.gradientotherforms;
             this.ClientSize = new System.Drawing.Size(480, 640);
-            this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.button2);
             this.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

@@ -34,6 +34,8 @@ namespace OODB
             roundedButton1.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
             roundedButton1.FlatAppearance.MouseDownBackColor = Color.FromArgb(68, 102, 85);
             roundedButton1.FlatAppearance.MouseOverBackColor = Color.FromArgb(70, 68, 102, 85);
+
+            
         }
 
         private const int EM_SETCUEBANNER = 0x1501;
@@ -172,5 +174,6 @@ namespace OODB
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
     }
 }

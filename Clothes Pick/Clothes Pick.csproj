@@ -162,6 +162,12 @@
     <Compile Include="Sweaterform.Designer.cs">
       <DependentUpon>Sweaterform.cs</DependentUpon>
     </Compile>
+    <Compile Include="TempBelow15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TempBelow15.Designer.cs">
+      <DependentUpon>TempBelow15.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransparentTextBox.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -205,6 +211,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Sweaterform.resx">
       <DependentUpon>Sweaterform.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TempBelow15.resx">
+      <DependentUpon>TempBelow15.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

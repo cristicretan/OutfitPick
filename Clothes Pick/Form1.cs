@@ -26,6 +26,8 @@ namespace Clothes_Pick
 
         public static string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\";
 
+        public static int temperature;
+
         public Form1()
         {
             InitializeComponent();
@@ -60,15 +62,18 @@ namespace Clothes_Pick
 
         }
 
-        private async void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
+        public async void watcher_PositionChanged(object sender, GeoPositionChangedEventArgs<GeoCoordinate> e)
         {
             var lat = e.Position.Location.Latitude;
             var lon = e.Position.Location.Longitude;
 
             RootObject myWeather = await OpenWeatherMapProxy.GetWeather(lat, lon);
 
+            temperature = (int)myWeather.main.temp;
+           
            /// MessageBox.Show(((int)myWeather.main.temp).ToString() + "°C" + " " + myWeather.weather[0].description, "Weather For Today", MessageBoxButtons.OK);
 
+           
             
         }
 
@@ -102,25 +107,58 @@ namespace Clothes_Pick
             this.Hide();
         }
 
+        TempBelow15 tempbelow15 = new TempBelow15();
+
         private void button3_Click(object sender, EventArgs e)
         {
-            
-            try
-            {
-                foreach(string c in Program.Buffer.Clothes)
-                {
-                    MessageBox.Show(c);
-                }
-                foreach(string c in Program.Buffer.Colors)
-                {
-                    MessageBox.Show(c);
-                }
-            }
-
-            catch when(Program.Buffer == null)
+            if(Program.Buffer.Clothes.Count == 0 && Program.Buffer.Colors.Count == 0)
             {
                 MessageBox.Show("Articles is null.");
             }
+            else
+            {
+                if(temperature <= 15)
+                {
+                    
+                    tempbelow15.Show();
+                    this.Hide();
+                    // 1.jacket or coat 
+                    // 2.hoodie or sweater or shirt
+                    // 2.1 sweater
+                    // 2.1.1 shirt or t - shirt
+                    // 2.1.2 if(shirt) optional t - shirt
+                    // 2.2 hoodie  ->  t - shirt
+                    // 2.3 t - shirt
+                    // 3.pants -> based on color
+                    // based on color 
+
+                }
+
+                else if(temperature  >= 15 && temperature <= 20)
+                {
+                    // 1. hoodie or sweater or shirt 
+                    // 1.1 sweater
+                    // 1.1.1 shirt or t - shirt
+                    // 1.1.2 if(shirt) optional t- shirt
+                    // 1.2 hoodie 
+                    // 1.2.1 t - shirt
+                    // 1.3 shirt
+                    // 1.3.1 t - shirt
+                    // 2. pants -> based on color
+                }
+
+                else if(temperature > 20  && temperature < 27)
+                {
+                    // 1. hoodie or shirt
+                    // 1.1 hoodie
+                    // 1.1.1 t - shirt
+                    // 1.2 shirt
+                    // 1.2.1 t- shirt
+                    // 2. pants -> based on color
+                }
+
+            }
+            
         }
 
     }

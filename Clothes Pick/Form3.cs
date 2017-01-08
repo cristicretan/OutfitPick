@@ -24,8 +24,6 @@ namespace Clothes_Pick
         public Pen cropPen;
         public DashStyle cropDashStyle = DashStyle.DashDot;
 
-        int NumberOfClick = 0;
-
         private FilterInfoCollection videoDevices;
         private VideoCaptureDevice videoSource;
 
@@ -49,7 +47,7 @@ namespace Clothes_Pick
 
         public static string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\T-Shirts\";
 
-        public static string path2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\T-Shirts\Cropped";
+        public static string path2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\T-Shirts\Cropped\";
 
         public Form3()
         {
@@ -68,7 +66,7 @@ namespace Clothes_Pick
         private void button2_Click(object sender, EventArgs e)
         {
             button2clicked = true;
-            NumberOfClick++;
+            Program.tshirtclicks++;
             if (pictureBox5.Image != null)
             {
                 Bitmap varBmp = new Bitmap(pictureBox5.Image);
@@ -80,7 +78,7 @@ namespace Clothes_Pick
                 pictureBox5.Image = newBitmap;
                 pictureBox5.Invalidate();
 
-                switch (NumberOfClick)
+                switch (Program.tshirtclicks)
                 {
                     case 1:
                         pictureBox1.Image = newBitmap;
@@ -165,7 +163,7 @@ namespace Clothes_Pick
                         pictureBox5.Visible = true;
                         button2.Visible = false;
 
-                        newBitmap.Save(path1 + "image" + NumberOfClick.ToString() + ".png", ImageFormat.Png);
+                        newBitmap.Save(path1 + "image" + Program.tshirtclicks.ToString() + ".png", ImageFormat.Png);
 
                         pictureBox4.Image = pictureBox3.Image;
                         pictureBox3.Image = pictureBox2.Image;
@@ -194,8 +192,8 @@ namespace Clothes_Pick
             if (Result == DialogResult.Yes)
             {
 
-                ++NumberOfClick;
-                switch (NumberOfClick)
+                ++Program.tshirtclicks;
+                switch (Program.tshirtclicks)
                 {
                     case 1:
                         OpenFileDialog f = new OpenFileDialog();
@@ -331,7 +329,7 @@ namespace Clothes_Pick
                         {
                             currentImage = Image.FromFile(f5.FileName);
 
-                            currentImage.Save(path1 + "image" + NumberOfClick.ToString() + ".png", ImageFormat.Png);
+                            currentImage.Save(path1 + "image" + Program.tshirtclicks.ToString() + ".png", ImageFormat.Png);
 
                             pictureBox4.Image = pictureBox3.Image;
                             pictureBox3.Image = pictureBox2.Image;
@@ -392,10 +390,10 @@ namespace Clothes_Pick
             string path2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
             path += @"\Gallery\T-Shirts\";
-            path2 += @"\Gallery\T-Shirts\Cropped";
+            path2 += @"\Gallery\T-Shirts\Cropped\";
 
             if (!Directory.Exists(path)) Directory.CreateDirectory(path);
-            if (!Directory.Exists(path1)) Directory.CreateDirectory(path1);
+            if (!Directory.Exists(path2)) Directory.CreateDirectory(path2);
 
             videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 
@@ -551,12 +549,12 @@ namespace Clothes_Pick
 
                 if (SelectedArea == null) return;
 
-                SelectedArea.Save(path2 + "image" + NumberOfClick.ToString() + "cropped.png", ImageFormat.Png);
+                SelectedArea.Save(path2 + "image" + Program.tshirtclicks.ToString() + "cropped.png", ImageFormat.Png);
 
-                string filename = path2 + "image" + NumberOfClick.ToString() + "cropped.png";
-                string filep = path2 + "image" + NumberOfClick.ToString() + "cropped.png";
+                string filename = path2 + "image" + Program.tshirtclicks.ToString() + "cropped.png";
+                string filep = path2 + "image" + Program.tshirtclicks.ToString() + "cropped.png";
 
-                GetDominantColor(filep, 1, NumberOfClick);
+                GetDominantColor(filep, 1, Program.tshirtclicks);
 
 
                 if (File.Exists(filename))
@@ -722,7 +720,7 @@ namespace Clothes_Pick
 
             if (button2clicked == true)
             {
-                if (Result == DialogResult.No && NumberOfClick > 0)
+                if (Result == DialogResult.No && Program.tshirtclicks > 0)
                 {
                     Points = new List<Point>();
                     Selecting = true;
@@ -741,7 +739,7 @@ namespace Clothes_Pick
 
             if (button2clicked == true)
             {
-                if (Result == DialogResult.No && NumberOfClick > 0)
+                if (Result == DialogResult.No && Program.tshirtclicks > 0)
                 {
                     if (!Selecting) return;
                     Points.Add(new Point(e.X, e.Y));

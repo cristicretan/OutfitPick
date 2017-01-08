@@ -26,7 +26,7 @@ namespace Clothes_Pick
 
         public static string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\";
 
-        public static int temperature;
+        public static int temperature = 0;
 
         public Form1()
         {

@@ -19,17 +19,6 @@ namespace Clothes_Pick
         public static string path3 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Sweaters";
         public static string path4 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Shirts";
 
-        List<Image> HoodiesList = new List<Image>();
-        List<Image> SweatersList = new List<Image>();
-        List<Image> ShirtsList = new List<Image>();
-        List<Image> PantsList = new List<Image>();
-
-        List<string> HoodiesPath = new List<string>();
-        List<string> SweatersPath = new List<string>();
-        List<string> ShirtsPath = new List<string>();
-        List<string> PantsPath = new List<string>();
-
-
         string[] hoodies; 
         string[] sweaters; 
         string[] shirts;
@@ -320,13 +309,13 @@ namespace Clothes_Pick
                     }
                 if (exists)
                 {
-                    SweatersList.Add(Image.FromFile(myFile));
-                    SweatersPath.Add(myFile);
+                    Program.SweatersListBelow.Add(Image.FromFile(myFile));
+                    Program.SweatersPathBelow.Add(myFile);
                 }
 
             }
 
-            foreach(Image image in SweatersList)
+            foreach(Image image in Program.SweatersListBelow)
             {
                 pictureBox1.Image = image;
             }
@@ -378,13 +367,13 @@ namespace Clothes_Pick
                     }
                 if (exists)
                 {
-                    ShirtsList.Add(Image.FromFile(myFile));
-                    ShirtsPath.Add(myFile);
+                    Program.ShirtsListBelow.Add(Image.FromFile(myFile));
+                    Program.ShirtsPathBelow.Add(myFile);
                 }
 
             }
 
-            foreach (Image image in ShirtsList)
+            foreach (Image image in Program.ShirtsListBelow)
             {
                 pictureBox1.Image = image;
             }
@@ -432,13 +421,13 @@ namespace Clothes_Pick
                     }
                 if (exists)
                 {
-                    HoodiesList.Add(Image.FromFile(myFile));
-                    HoodiesPath.Add(myFile);
+                    Program.HoodiesListBelow.Add(Image.FromFile(myFile));
+                    Program.HoodiesPathBelow.Add(myFile);
                 }
 
             }
 
-            foreach (Image image in HoodiesList)
+            foreach (Image image in Program.HoodiesListBelow)
             {
                 pictureBox1.Image = image;
             }
@@ -451,93 +440,91 @@ namespace Clothes_Pick
         {
             if (sweaterclicked)
             {
-                if (SweatersList.Count != 1)
+                if (Program.SweatersListBelow.Count != 1 || Program.SweatersListBelow.Count == 0)
                 {
                     ++i;
-                    if (i >= SweatersList.Count - 1)
+                    if (i >= Program.SweatersListBelow.Count - 1)
                     {
                         i = 0;
-                        pictureBox1.Image = SweatersList[i];
+                        pictureBox1.Image = Program.SweatersListBelow[i];
                     }
-                    else pictureBox1.Image = SweatersList[i];
+                    else pictureBox1.Image = Program.SweatersListBelow[i];
                 }
-                else pictureBox1.Image = SweatersList[i];
+                else pictureBox1.Image = Program.SweatersListBelow[i];
             }
             else if (shirtclicked)
             {
-                if (ShirtsList.Count != 1 || ShirtsList.Count == 0)
+                if (Program.ShirtsListBelow.Count != 1 || Program.ShirtsListBelow.Count == 0)
                 {
                     ++i;
-                    if (i >= ShirtsList.Count - 1)
+                    if (i >= Program.ShirtsListBelow.Count - 1)
                     {
                         i = 0;
-                        pictureBox1.Image = ShirtsList[i];
+                        pictureBox1.Image = Program.ShirtsListBelow[i];
                     }
-                    else pictureBox1.Image = ShirtsList[i];
+                    else pictureBox1.Image = Program.ShirtsListBelow[i];
                 }
-                else pictureBox1.Image = ShirtsList[i];
+                else pictureBox1.Image = Program.ShirtsListBelow[i];
             }
             else if (hoodieclicked)
             {
-                if (HoodiesList.Count != 1)
+                if (Program.HoodiesListBelow.Count != 1 || Program.HoodiesListBelow.Count == 0)
                 {
                     ++i;
-                    if (i >= HoodiesList.Count - 1)
+                    if (i >= Program.HoodiesListBelow.Count - 1)
                     {
                         i = 0;
-                        pictureBox1.Image = HoodiesList[i];
+                        pictureBox1.Image = Program.HoodiesListBelow[i];
                     }
-                    else pictureBox1.Image = HoodiesList[i];
+                    else pictureBox1.Image = Program.HoodiesListBelow[i];
                 }
-                else pictureBox1.Image = HoodiesList[i];
+                else pictureBox1.Image = Program.HoodiesListBelow[i];
             }
          
         }
 
         private void previousbutton_Click(object sender, EventArgs e)
         {
-            
             if (sweaterclicked)
             {
-                
-                if (SweatersList.Count != 1)
+                if (Program.SweatersListBelow.Count != 1 || Program.SweatersListBelow.Count == 0)
                 {
                     --i;
                     if (i < 0)
                     {
-                        i = SweatersList.Count - 1;
-                        pictureBox1.Image = SweatersList[i];
+                        i = Program.SweatersListBelow.Count - 1;
+                        pictureBox1.Image = Program.SweatersListBelow[i];
                     }
                 } 
-                else pictureBox1.Image = SweatersList[i];
+                else pictureBox1.Image = Program.SweatersListBelow[i];
             }
             else if (shirtclicked)
             {
                 
-                if (ShirtsList.Count != 1)
+                if (Program.ShirtsListBelow.Count != 1 || Program.ShirtsListBelow.Count == 0)
                 {
                     --i;
                     if (i < 0)
                     {
-                        i = ShirtsList.Count - 1;
-                        pictureBox1.Image = ShirtsList[i];
+                        i = Program.ShirtsListBelow.Count - 1;
+                        pictureBox1.Image = Program.ShirtsListBelow[i];
                     }
                 }
-                else pictureBox1.Image = ShirtsList[i];
+                else pictureBox1.Image = Program.ShirtsListBelow[i];
             }
             else if(hoodieclicked)
             {
                 
-                if (HoodiesList.Count != 1)
+                if (Program.HoodiesListBelow.Count != 1 || Program.HoodiesListBelow.Count == 0)
                 {
                     --i;
                     if (i < 0)
                     {
-                        i = ShirtsList.Count - 1;
-                        pictureBox1.Image = HoodiesList[i];
+                        i = Program.ShirtsListBelow.Count - 1;
+                        pictureBox1.Image = Program.HoodiesListBelow[Program.ShirtsListBelow.Count - 1];
                     }
                 }
-                else pictureBox1.Image = HoodiesList[i];
+                else pictureBox1.Image = Program.HoodiesListBelow[i];
             }
 
         }
@@ -722,10 +709,10 @@ namespace Clothes_Pick
                 if(coatclicked)
                 {
                     Image clickedsweater;
-                    clickedsweater = SweatersList[i];
+                    clickedsweater = Program.SweatersListBelow[i];
 
                     string clickedsweaterColor;
-                    clickedsweaterColor = GetDominantColor(SweatersPath[i], 1);
+                    clickedsweaterColor = GetDominantColor(Program.SweatersPathBelow[i], 1);
 
                     OverTopBox.Visible = true;
                     topBox.Visible = true;
@@ -755,12 +742,12 @@ namespace Clothes_Pick
                             }
                         if (exists)
                         {
-                            PantsList.Add(Image.FromFile(myFile));
-                            PantsPath.Add(myFile);
+                            Program.PantsListBelow.Add(Image.FromFile(myFile));
+                            Program.PantsPathBelow.Add(myFile);
                         }
                     }
 
-                    foreach(Image pantsimage in PantsList)
+                    foreach(Image pantsimage in Program.PantsListBelow)
                     {
                         pantsBox.Image = pantsimage;
                     }
@@ -769,9 +756,9 @@ namespace Clothes_Pick
                 else if(jacketclicked)
                 {
                     Image clickedsweater;
-                    clickedsweater = SweatersList[i];
+                    clickedsweater = Program.SweatersListBelow[i];
 
-                    string clickedsweaterColor = GetDominantColor(SweatersPath[i], 1);
+                    string clickedsweaterColor = GetDominantColor(Program.SweatersPathBelow[i], 1);
 
                     OverTopBox.Visible = true;
                     topBox.Visible = true;
@@ -801,12 +788,12 @@ namespace Clothes_Pick
                             }
                         if (exists)
                         {
-                            PantsList.Add(Image.FromFile(myFile));
-                            PantsPath.Add(myFile);
+                            Program.PantsListBelow.Add(Image.FromFile(myFile));
+                            Program.PantsPathBelow.Add(myFile);
                         }
                     }
 
-                    foreach (Image pantsimage in PantsList)
+                    foreach (Image pantsimage in Program.PantsListBelow)
                     {
                         pantsBox.Image = pantsimage;
                     }
@@ -819,9 +806,9 @@ namespace Clothes_Pick
                 if(coatclicked)
                 {
                     Image clickedshirt;
-                    clickedshirt = ShirtsList[i];
+                    clickedshirt = Program.ShirtsListBelow[i];
 
-                    string clickedshirtColor = GetDominantColor(ShirtsPath[i] , 1);
+                    string clickedshirtColor = GetDominantColor(Program.ShirtsPathBelow[i] , 1);
 
                     OverTopBox.Visible = true;
                     topBox.Visible = true;
@@ -851,12 +838,12 @@ namespace Clothes_Pick
                             }
                         if (exists)
                         {
-                            PantsList.Add(Image.FromFile(myFile));
-                            PantsPath.Add(myFile);
+                            Program.PantsListBelow.Add(Image.FromFile(myFile));
+                            Program.PantsPathBelow.Add(myFile);
                         }
                     }
 
-                    foreach (Image pantsimage in PantsList)
+                    foreach (Image pantsimage in Program.PantsListBelow)
                     {
                         pantsBox.Image = pantsimage;
                     }
@@ -865,9 +852,9 @@ namespace Clothes_Pick
                 else if(jacketclicked)
                 {
                     Image clickedshirt;
-                    clickedshirt = ShirtsList[i];
+                    clickedshirt = Program.ShirtsListBelow[i];
 
-                    string clickedshirtColor = GetDominantColor(ShirtsPath[i], 1);
+                    string clickedshirtColor = GetDominantColor(Program.ShirtsPathBelow[i], 1);
 
                     OverTopBox.Visible = true;
                     topBox.Visible = true;
@@ -897,12 +884,12 @@ namespace Clothes_Pick
                             }
                         if (exists)
                         {
-                            PantsList.Add(Image.FromFile(myFile));
-                            PantsPath.Add(myFile);
+                            Program.PantsListBelow.Add(Image.FromFile(myFile));
+                            Program.PantsPathBelow.Add(myFile);
                         }
                     }
 
-                    foreach (Image pantsimage in PantsList)
+                    foreach (Image pantsimage in Program.PantsListBelow)
                     {
                         pantsBox.Image = pantsimage;
                     }
@@ -915,9 +902,9 @@ namespace Clothes_Pick
                 if(coatclicked)
                 {
                     Image clickedhoodie;
-                    clickedhoodie = HoodiesList[i];
+                    clickedhoodie = Program.HoodiesListBelow[i];
 
-                    string clickedhoodieColor = GetDominantColor(HoodiesPath[i], 1);
+                    string clickedhoodieColor = GetDominantColor(Program.HoodiesPathBelow[i], 1);
 
                     OverTopBox.Visible = true;
                     topBox.Visible = true;
@@ -947,12 +934,12 @@ namespace Clothes_Pick
                             }
                         if (exists)
                         {
-                            PantsList.Add(Image.FromFile(myFile));
-                            PantsPath.Add(myFile);
+                            Program.PantsListBelow.Add(Image.FromFile(myFile));
+                            Program.PantsPathBelow.Add(myFile);
                         }
                     }
 
-                    foreach (Image pantsimage in PantsList)
+                    foreach (Image pantsimage in Program.PantsListBelow)
                     {
                         pantsBox.Image = pantsimage;
                     }
@@ -960,9 +947,9 @@ namespace Clothes_Pick
                 else if(jacketclicked)
                 {
                     Image clickedhoodie;
-                    clickedhoodie = HoodiesList[i];
+                    clickedhoodie = Program.HoodiesListBelow[i];
 
-                    string clickedhoodieColor = GetDominantColor(HoodiesPath[i], 1);
+                    string clickedhoodieColor = GetDominantColor(Program.HoodiesPathBelow[i], 1);
 
                     OverTopBox.Visible = true;
                     topBox.Visible = true;
@@ -992,12 +979,12 @@ namespace Clothes_Pick
                             }
                         if (exists)
                         {
-                            PantsList.Add(Image.FromFile(myFile));
-                            PantsPath.Add(myFile);
+                            Program.PantsListBelow.Add(Image.FromFile(myFile));
+                            Program.PantsPathBelow.Add(myFile);
                         }
                     }
 
-                    foreach (Image pantsimage in PantsList)
+                    foreach (Image pantsimage in Program.PantsListBelow)
                     {
                         pantsBox.Image = pantsimage;
                     }
@@ -1026,32 +1013,32 @@ namespace Clothes_Pick
         
         private void pantsNext_Click(object sender, EventArgs e)
         {
-                if (PantsList.Count != 1)
+                if (Program.PantsListBelow.Count != 1)
                 {
                     ++k;
-                    if (k >= PantsList.Count - 1)
+                    if (k >= Program.PantsListBelow.Count - 1)
                     {
                         k = 0;
-                        pantsBox.Image = PantsList[k];
+                        pantsBox.Image = Program.PantsListBelow[k];
                     }
-                    else pantsBox.Image = PantsList[k];
+                    else pantsBox.Image = Program.PantsListBelow[k];
                 }
-                else pantsBox.Image = PantsList[0];
+                else pantsBox.Image = Program.PantsListBelow[0];
         }
 
         private void pantsPrevious_Click(object sender, EventArgs e)
         {
-            if (PantsList.Count != 1)
+            if (Program.PantsListBelow.Count != 1)
             {
                 --k;
                 if (k < 0)
                 {
-                    k = PantsList.Count - 1;
-                    pantsBox.Image = PantsList[k];
+                    k = Program.PantsListBelow.Count - 1;
+                    pantsBox.Image = Program.PantsListBelow[k];
                 }
-                else pantsBox.Image = PantsList[k];
+                else pantsBox.Image = Program.PantsListBelow[k];
             }
-            else pantsBox.Image = PantsList[0];
+            else pantsBox.Image = Program.PantsListBelow[0];
         }
     }
 }

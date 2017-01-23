@@ -1,6 +1,7 @@
 ﻿using OODB;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,6 +19,16 @@ namespace Clothes_Pick
         public static int pantsclicks = 0;
         public static int shirtclicks = 0;
         public static int sweaterclicks = 0;
+
+        public static List<Image> HoodiesListBelow = new List<Image>();
+        public static List<Image> SweatersListBelow = new List<Image>();
+        public static List<Image> ShirtsListBelow = new List<Image>();
+        public static List<Image> PantsListBelow = new List<Image>();
+
+        public static List<string> HoodiesPathBelow = new List<string>();
+        public static List<string> SweatersPathBelow = new List<string>();
+        public static List<string> ShirtsPathBelow = new List<string>();
+        public static List<string> PantsPathBelow = new List<string>();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

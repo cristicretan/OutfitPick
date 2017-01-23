@@ -21,6 +21,10 @@ namespace OODB
         {
             InitializeComponent();
 
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
+            MessageBox.Show(path);
+
             button2.TabStop = false;
             button2.FlatStyle = FlatStyle.Flat;
             button2.FlatAppearance.BorderSize = 0;
@@ -102,6 +106,7 @@ namespace OODB
                     if (cmd.ExecuteNonQuery() > 0)
                     {
                         MessageBox.Show("Account succesfully created! Now you can log in");
+                        
                     }
                     connection.Close();
                 }

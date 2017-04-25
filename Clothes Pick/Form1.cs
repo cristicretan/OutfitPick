@@ -338,7 +338,6 @@ namespace Clothes_Pick
 
                 else if(Program.Temperature >= 15 && Program.Temperature <= 20)
                 {
-
                     // 1. hoodie or sweater or shirt 
                     // 1.1 sweater
                     // 1.1.1 shirt or t - shirt

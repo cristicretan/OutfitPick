@@ -121,46 +121,100 @@
   <data name="shutdown40" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\shutdown40.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="onlylogo200sharpi1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\onlylogo200sharpi1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="back140i" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\back140i.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="sweater" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\sweater.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_09d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\09d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="hoodie" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hoodie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="coat" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\coat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="T_shirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\T-shirt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="backphoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\backphoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="pantsnew" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\pantsnew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="shirt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\shirt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_02n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\02n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="gradientotherforms" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gradientotherforms.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="garderobe40i" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\garderobe40i.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_04d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\04d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="back140i" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\back140i.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="sweater" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\sweater.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="io_40i" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\io 40i.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_50d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_01n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\01n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="hoodie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hoodie.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Jacket170" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Jacket 170.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_50n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\50n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="onlylogo1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\onlylogo1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_13n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\13n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_09n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\09n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="coat" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\coat.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="garderobe40i" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\garderobe40i.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="beige-nature-wallpaper-851x315" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\beige-nature-wallpaper-851x315.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_11d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_03d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\03d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="backphoto" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\backphoto.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_01d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\01d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="io_40i" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\io 40i.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_03n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\03n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="onlylogo200sharpi1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\onlylogo200sharpi1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="shirt1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\shirt1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_13d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\13d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_04n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\04n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="T_shirt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\T-shirt.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_11n" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\11n.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="pantsnew" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\pantsnew.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_02d" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\02d.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ispfrt" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ispfrt.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

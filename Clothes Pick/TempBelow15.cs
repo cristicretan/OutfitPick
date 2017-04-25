@@ -1040,5 +1040,10 @@ namespace Clothes_Pick
             }
             else pantsBox.Image = Program.PantsListBelow[0];
         }
+
+        private void topBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

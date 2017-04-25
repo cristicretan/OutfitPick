@@ -50,6 +50,8 @@ namespace Clothes_Pick
 
         public CoatForm()
         {
+           int  fCount = Directory.GetFiles(path2, "*", SearchOption.TopDirectoryOnly).Length;
+            Program.coatclicks = fCount;
             InitializeComponent();
         }
 
@@ -385,13 +387,13 @@ namespace Clothes_Pick
 
         private void CoatForm_Load(object sender, EventArgs e)
         {
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string path2 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            path += @"\Gallery\Coats\";
-            path2 += @"\Gallery\Coats\Cropped\";
+            string path007 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            string path008 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            path007 += @"\Gallery\Coats\";
+            path008 += @"\Gallery\Coats\Cropped\";
 
-            if (!Directory.Exists(path)) Directory.CreateDirectory(path);
-            if (!Directory.Exists(path2)) Directory.CreateDirectory(path2);
+            if (!Directory.Exists(path007)) Directory.CreateDirectory(path007);
+            if (!Directory.Exists(path008)) Directory.CreateDirectory(path008);
 
             videoDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
 

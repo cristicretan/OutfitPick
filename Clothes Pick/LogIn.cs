@@ -29,7 +29,10 @@ namespace OODB
 
             isPostBack = false;
 
-            button3.TabStop = false;
+            var dt1 = DateTime.Parse("08:00 AM").ToString("hh:mm tt");
+            var dt2 = DateTime.Parse("08:00 PM").ToString("hh:mm tt");
+
+                button3.TabStop = false;
             button3.FlatStyle = FlatStyle.Flat;
             button3.FlatAppearance.BorderSize = 0;
             button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent

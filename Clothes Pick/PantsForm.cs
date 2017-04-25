@@ -52,6 +52,8 @@ namespace Clothes_Pick
         public PantsForm()
         {
             InitializeComponent();
+            int fCount = Directory.GetFiles(path2, "*", SearchOption.TopDirectoryOnly).Length;
+            Program.pantsclicks = fCount;
         }
 
         private void PantsForm_MouseDown(object sender, MouseEventArgs e)

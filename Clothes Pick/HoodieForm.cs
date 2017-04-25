@@ -52,6 +52,8 @@ namespace Clothes_Pick
         public HoodieForm()
         {
             InitializeComponent();
+            int fCount = Directory.GetFiles(path2, "*", SearchOption.TopDirectoryOnly).Length;
+            Program.hoodieclicks = fCount;
         }
 
         private void HoodieForm_MouseDown(object sender, MouseEventArgs e)

@@ -51,6 +51,8 @@ namespace Clothes_Pick
         public ShirtForm()
         {
             InitializeComponent();
+            int fCount = Directory.GetFiles(path2, "*", SearchOption.TopDirectoryOnly).Length;
+            Program.shirtclicks = fCount;
         }
 
         private void ShirtForm_MouseDown(object sender, MouseEventArgs e)
@@ -743,3 +745,4 @@ namespace Clothes_Pick
         }
     }
 }
+

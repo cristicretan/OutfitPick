@@ -26,16 +26,16 @@ namespace Clothes_Pick
             var padding = -1;
             if (change < 0)
             {
-                var max = (from Control control in Controls select control.Top + control.Height + padding).Concat(new[] { int.MinValue }).Max();
+                var max = (from Control control in Controls select control.Left + control.Width + padding).Concat(new[] { int.MinValue }).Max();
 
-                if (max < Height + Math.Abs(change))
+                if (max < Width + Math.Abs(change))
                 {
-                    return Height - max;
+                    return Width - max;
                 }
             }
             else
             {
-                var min = (from Control control in Controls select control.Top).Concat(new[] { int.MaxValue }).Min();
+                var min = (from Control control in Controls select control.Left).Concat(new[] { int.MaxValue }).Min();
 
                 if (min > padding - Math.Abs(change))
                 {
@@ -51,7 +51,7 @@ namespace Clothes_Pick
 
             foreach (Control control in Controls)
             {
-                control.Top += change;
+                control.Left += change;
             }
 
         }
@@ -60,7 +60,7 @@ namespace Clothes_Pick
         {
             if ((MouseButtons & MouseButtons.Left) != 0)
             {
-                var delta = e.Y - _mouseLastPosition.Y;
+                var delta = _mouseLastPosition.X - e.X;
                 HandleDelta(delta);
                 _mouseLastPosition = e.Location;
             }

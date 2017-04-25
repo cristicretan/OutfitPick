@@ -81,11 +81,23 @@
     <Compile Include="Class1.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Coat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coat.Designer.cs">
+      <DependentUpon>Coat.cs</DependentUpon>
+    </Compile>
     <Compile Include="CoatForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CoatForm.Designer.cs">
       <DependentUpon>CoatForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CoatOrJacket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoatOrJacket.Designer.cs">
+      <DependentUpon>CoatOrJacket.cs</DependentUpon>
     </Compile>
     <Compile Include="Connection.cs" />
     <Compile Include="Encrypt.cs" />
@@ -107,11 +119,29 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hoodie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hoodie.Designer.cs">
+      <DependentUpon>Hoodie.cs</DependentUpon>
+    </Compile>
     <Compile Include="HoodieForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="HoodieForm.Designer.cs">
       <DependentUpon>HoodieForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HoodieSweaterShirt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HoodieSweaterShirt.Designer.cs">
+      <DependentUpon>HoodieSweaterShirt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Jacket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Jacket.Designer.cs">
+      <DependentUpon>Jacket.cs</DependentUpon>
     </Compile>
     <Compile Include="JacketForm.cs">
       <SubType>Form</SubType>
@@ -126,6 +156,12 @@
     <Compile Include="LogIn.Designer.cs">
       <DependentUpon>LogIn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pants.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pants.Designer.cs">
+      <DependentUpon>Pants.cs</DependentUpon>
+    </Compile>
     <Compile Include="PantsForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -133,6 +169,12 @@
       <DependentUpon>PantsForm.cs</DependentUpon>
     </Compile>
     <Compile Include="OpenWeatherMapProxy.cs" />
+    <Compile Include="PickMyClothes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PickMyClothes.Designer.cs">
+      <DependentUpon>PickMyClothes.cs</DependentUpon>
+    </Compile>
     <Compile Include="PictureAnalysis.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,6 +198,24 @@
     <Compile Include="ShirtForm.Designer.cs">
       <DependentUpon>ShirtForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Skirt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Skirt.Designer.cs">
+      <DependentUpon>Skirt.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SkirtForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SkirtForm.Designer.cs">
+      <DependentUpon>SkirtForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Sweater.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sweater.Designer.cs">
+      <DependentUpon>Sweater.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sweaterform.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,8 +234,20 @@
     <Compile Include="TransparentTextBox.Designer.cs">
       <DependentUpon>TransparentTextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Shirt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shirt.Designer.cs">
+      <DependentUpon>Shirt.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Coat.resx">
+      <DependentUpon>Coat.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CoatForm.resx">
       <DependentUpon>CoatForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CoatOrJacket.resx">
+      <DependentUpon>CoatOrJacket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -186,8 +258,17 @@
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Hoodie.resx">
+      <DependentUpon>Hoodie.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="HoodieForm.resx">
       <DependentUpon>HoodieForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HoodieSweaterShirt.resx">
+      <DependentUpon>HoodieSweaterShirt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Jacket.resx">
+      <DependentUpon>Jacket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JacketForm.resx">
       <DependentUpon>JacketForm.cs</DependentUpon>
@@ -195,8 +276,14 @@
     <EmbeddedResource Include="LogIn.resx">
       <DependentUpon>LogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pants.resx">
+      <DependentUpon>Pants.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PantsForm.resx">
       <DependentUpon>PantsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PickMyClothes.resx">
+      <DependentUpon>PickMyClothes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -209,12 +296,25 @@
     <EmbeddedResource Include="ShirtForm.resx">
       <DependentUpon>ShirtForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Skirt.resx">
+      <DependentUpon>Skirt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SkirtForm.resx">
+      <DependentUpon>SkirtForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sweater.resx">
+      <DependentUpon>Sweater.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Sweaterform.resx">
       <DependentUpon>Sweaterform.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TempBelow15.resx">
       <DependentUpon>TempBelow15.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Shirt.resx">
+      <DependentUpon>Shirt.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -254,6 +354,24 @@
     <Content Include="Clothes-Pick-Icon.ico" />
     <Content Include="logo.ico" />
     <Content Include="logo1.ico" />
+    <None Include="Resources\ispfrt.jpg" />
+    <None Include="Resources\beige-nature-wallpaper-851x315.jpg" />
+    <None Include="Resources\50n.png" />
+    <None Include="Resources\50d.png" />
+    <None Include="Resources\13n.png" />
+    <None Include="Resources\13d.png" />
+    <None Include="Resources\11n.png" />
+    <None Include="Resources\11d.png" />
+    <None Include="Resources\09n.png" />
+    <None Include="Resources\09d.png" />
+    <None Include="Resources\04n.png" />
+    <None Include="Resources\04d.png" />
+    <None Include="Resources\03n.png" />
+    <None Include="Resources\03d.png" />
+    <None Include="Resources\02n.png" />
+    <None Include="Resources\02d.png" />
+    <None Include="Resources\01n.png" />
+    <None Include="Resources\01d.png" />
     <None Include="Resources\onlylogo1.png" />
     <None Include="Resources\io 40i.png" />
     <None Include="Resources\back140i.png" />

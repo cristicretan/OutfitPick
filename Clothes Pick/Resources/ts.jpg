@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Clothes_Pick.Resources
+{
+    public partial class ts: Component
+    {    
+        public ts()
+        {
+            InitializeComponent();
+        }
+
+        public ts(IContainer container)
+        {
+            container.Add(this);
+
+            InitializeComponent();
+        }
+    }
+}

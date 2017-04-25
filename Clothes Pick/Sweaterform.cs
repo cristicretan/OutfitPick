@@ -53,6 +53,8 @@ namespace Clothes_Pick
         public Sweaterform()
         {
             InitializeComponent();
+            int fCount = Directory.GetFiles(path2, "*", SearchOption.TopDirectoryOnly).Length;
+            Program.sweaterclicks = fCount;
         }
 
         private void Sweaterform_MouseDown(object sender, MouseEventArgs e)

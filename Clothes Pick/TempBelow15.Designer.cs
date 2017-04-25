@@ -56,9 +56,10 @@
             this.coatbutton.BackColor = System.Drawing.Color.Transparent;
             this.coatbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.coatbutton.Image = global::Clothes_Pick.Properties.Resources.coat;
-            this.coatbutton.Location = new System.Drawing.Point(12, 232);
+            this.coatbutton.Location = new System.Drawing.Point(16, 286);
+            this.coatbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.coatbutton.Name = "coatbutton";
-            this.coatbutton.Size = new System.Drawing.Size(220, 220);
+            this.coatbutton.Size = new System.Drawing.Size(293, 271);
             this.coatbutton.TabIndex = 11;
             this.coatbutton.UseVisualStyleBackColor = false;
             this.coatbutton.Click += new System.EventHandler(this.coatbutton_Click);
@@ -68,9 +69,10 @@
             this.jacketbutton.BackColor = System.Drawing.Color.Transparent;
             this.jacketbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.jacketbutton.Image = global::Clothes_Pick.Properties.Resources.Jacket170;
-            this.jacketbutton.Location = new System.Drawing.Point(248, 232);
+            this.jacketbutton.Location = new System.Drawing.Point(331, 286);
+            this.jacketbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.jacketbutton.Name = "jacketbutton";
-            this.jacketbutton.Size = new System.Drawing.Size(220, 220);
+            this.jacketbutton.Size = new System.Drawing.Size(293, 271);
             this.jacketbutton.TabIndex = 12;
             this.jacketbutton.UseVisualStyleBackColor = false;
             this.jacketbutton.Click += new System.EventHandler(this.jacketbutton_Click);
@@ -81,9 +83,10 @@
             this.Cancel.BackColor = System.Drawing.Color.Transparent;
             this.Cancel.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Cancel.ForeColor = System.Drawing.Color.White;
-            this.Cancel.Location = new System.Drawing.Point(381, 607);
+            this.Cancel.Location = new System.Drawing.Point(508, 747);
+            this.Cancel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(87, 24);
+            this.Cancel.Size = new System.Drawing.Size(112, 33);
             this.Cancel.TabIndex = 13;
             this.Cancel.Text = "Cancel";
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
@@ -94,9 +97,10 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(91, 95);
+            this.label1.Location = new System.Drawing.Point(121, 117);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 21);
+            this.label1.Size = new System.Drawing.Size(377, 23);
             this.label1.TabIndex = 14;
             this.label1.Text = "What do you feel like wearing today?";
             // 
@@ -106,9 +110,10 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(173, 116);
+            this.label2.Location = new System.Drawing.Point(231, 143);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(134, 21);
+            this.label2.Size = new System.Drawing.Size(167, 23);
             this.label2.TabIndex = 15;
             this.label2.Text = "Jacket or coat?";
             // 
@@ -117,9 +122,10 @@
             this.sweaterbutton.BackColor = System.Drawing.Color.Transparent;
             this.sweaterbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.sweaterbutton.Image = global::Clothes_Pick.Properties.Resources.sweater;
-            this.sweaterbutton.Location = new System.Drawing.Point(12, 158);
+            this.sweaterbutton.Location = new System.Drawing.Point(16, 194);
+            this.sweaterbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sweaterbutton.Name = "sweaterbutton";
-            this.sweaterbutton.Size = new System.Drawing.Size(220, 220);
+            this.sweaterbutton.Size = new System.Drawing.Size(293, 271);
             this.sweaterbutton.TabIndex = 16;
             this.sweaterbutton.UseVisualStyleBackColor = false;
             this.sweaterbutton.Visible = false;
@@ -130,9 +136,10 @@
             this.shirtbutton.BackColor = System.Drawing.Color.Transparent;
             this.shirtbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.shirtbutton.Image = global::Clothes_Pick.Properties.Resources.shirt1;
-            this.shirtbutton.Location = new System.Drawing.Point(248, 158);
+            this.shirtbutton.Location = new System.Drawing.Point(331, 194);
+            this.shirtbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.shirtbutton.Name = "shirtbutton";
-            this.shirtbutton.Size = new System.Drawing.Size(220, 220);
+            this.shirtbutton.Size = new System.Drawing.Size(293, 271);
             this.shirtbutton.TabIndex = 17;
             this.shirtbutton.UseVisualStyleBackColor = false;
             this.shirtbutton.Visible = false;
@@ -144,9 +151,10 @@
             this.hoodiebutton.BackColor = System.Drawing.Color.Transparent;
             this.hoodiebutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hoodiebutton.Image = global::Clothes_Pick.Properties.Resources.hoodie;
-            this.hoodiebutton.Location = new System.Drawing.Point(120, 384);
+            this.hoodiebutton.Location = new System.Drawing.Point(160, 473);
+            this.hoodiebutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.hoodiebutton.Name = "hoodiebutton";
-            this.hoodiebutton.Size = new System.Drawing.Size(220, 220);
+            this.hoodiebutton.Size = new System.Drawing.Size(293, 271);
             this.hoodiebutton.TabIndex = 18;
             this.hoodiebutton.UseVisualStyleBackColor = false;
             this.hoodiebutton.Visible = false;
@@ -155,9 +163,10 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.Location = new System.Drawing.Point(66, 179);
+            this.pictureBox1.Location = new System.Drawing.Point(88, 220);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(347, 296);
+            this.pictureBox1.Size = new System.Drawing.Size(463, 364);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 19;
             this.pictureBox1.TabStop = false;
@@ -169,9 +178,10 @@
             this.nextbutton.BackColor = System.Drawing.Color.White;
             this.nextbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nextbutton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nextbutton.Location = new System.Drawing.Point(329, 500);
+            this.nextbutton.Location = new System.Drawing.Point(439, 615);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(70, 40);
+            this.nextbutton.Size = new System.Drawing.Size(93, 49);
             this.nextbutton.TabIndex = 20;
             this.nextbutton.Text = "Next";
             this.nextbutton.UseVisualStyleBackColor = false;
@@ -183,9 +193,10 @@
             this.previousbutton.BackColor = System.Drawing.Color.White;
             this.previousbutton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.previousbutton.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.previousbutton.Location = new System.Drawing.Point(95, 500);
+            this.previousbutton.Location = new System.Drawing.Point(127, 615);
+            this.previousbutton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.previousbutton.Name = "previousbutton";
-            this.previousbutton.Size = new System.Drawing.Size(100, 40);
+            this.previousbutton.Size = new System.Drawing.Size(133, 49);
             this.previousbutton.TabIndex = 21;
             this.previousbutton.Text = "Previous";
             this.previousbutton.UseVisualStyleBackColor = false;
@@ -195,9 +206,10 @@
             // OverTopBox
             // 
             this.OverTopBox.BackColor = System.Drawing.Color.Transparent;
-            this.OverTopBox.Location = new System.Drawing.Point(120, 53);
+            this.OverTopBox.Location = new System.Drawing.Point(160, 65);
+            this.OverTopBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.OverTopBox.Name = "OverTopBox";
-            this.OverTopBox.Size = new System.Drawing.Size(226, 179);
+            this.OverTopBox.Size = new System.Drawing.Size(301, 220);
             this.OverTopBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.OverTopBox.TabIndex = 22;
             this.OverTopBox.TabStop = false;
@@ -206,20 +218,23 @@
             // topBox
             // 
             this.topBox.BackColor = System.Drawing.Color.Transparent;
-            this.topBox.Location = new System.Drawing.Point(120, 232);
+            this.topBox.Location = new System.Drawing.Point(160, 286);
+            this.topBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.topBox.Name = "topBox";
-            this.topBox.Size = new System.Drawing.Size(226, 154);
+            this.topBox.Size = new System.Drawing.Size(301, 190);
             this.topBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.topBox.TabIndex = 23;
             this.topBox.TabStop = false;
             this.topBox.Visible = false;
+            this.topBox.Click += new System.EventHandler(this.topBox_Click);
             // 
             // pantsBox
             // 
             this.pantsBox.BackColor = System.Drawing.Color.Transparent;
-            this.pantsBox.Location = new System.Drawing.Point(120, 386);
+            this.pantsBox.Location = new System.Drawing.Point(160, 475);
+            this.pantsBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pantsBox.Name = "pantsBox";
-            this.pantsBox.Size = new System.Drawing.Size(226, 192);
+            this.pantsBox.Size = new System.Drawing.Size(301, 236);
             this.pantsBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pantsBox.TabIndex = 24;
             this.pantsBox.TabStop = false;
@@ -230,9 +245,10 @@
             this.pantsNext.BackColor = System.Drawing.Color.White;
             this.pantsNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pantsNext.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pantsNext.Location = new System.Drawing.Point(290, 587);
+            this.pantsNext.Location = new System.Drawing.Point(387, 722);
+            this.pantsNext.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pantsNext.Name = "pantsNext";
-            this.pantsNext.Size = new System.Drawing.Size(85, 44);
+            this.pantsNext.Size = new System.Drawing.Size(113, 54);
             this.pantsNext.TabIndex = 25;
             this.pantsNext.Text = "Next";
             this.pantsNext.UseVisualStyleBackColor = false;
@@ -244,9 +260,10 @@
             this.pantsPrevious.BackColor = System.Drawing.Color.White;
             this.pantsPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.pantsPrevious.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.pantsPrevious.Location = new System.Drawing.Point(95, 587);
+            this.pantsPrevious.Location = new System.Drawing.Point(127, 722);
+            this.pantsPrevious.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.pantsPrevious.Name = "pantsPrevious";
-            this.pantsPrevious.Size = new System.Drawing.Size(100, 44);
+            this.pantsPrevious.Size = new System.Drawing.Size(133, 54);
             this.pantsPrevious.TabIndex = 26;
             this.pantsPrevious.Text = "Previous";
             this.pantsPrevious.UseVisualStyleBackColor = false;
@@ -255,10 +272,10 @@
             // 
             // TempBelow15
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::Clothes_Pick.Properties.Resources.gradientotherforms;
-            this.ClientSize = new System.Drawing.Size(480, 640);
+            this.ClientSize = new System.Drawing.Size(640, 788);
             this.Controls.Add(this.pantsPrevious);
             this.Controls.Add(this.pantsNext);
             this.Controls.Add(this.pantsBox);
@@ -277,6 +294,7 @@
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "TempBelow15";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TempBelow15";

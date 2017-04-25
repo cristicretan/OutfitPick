@@ -52,6 +52,8 @@ namespace Clothes_Pick
         public JacketForm()
         {
             InitializeComponent();
+            int fCount = Directory.GetFiles(path2, "*", SearchOption.TopDirectoryOnly).Length;
+            Program.jacketclicks = fCount;
         }
 
         private void JacketForm_MouseDown(object sender, MouseEventArgs e)

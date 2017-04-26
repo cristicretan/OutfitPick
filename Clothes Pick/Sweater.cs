@@ -13,25 +13,33 @@ namespace Clothes_Pick
 {
     public partial class Sweater : Form
     {
+
+        static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Sweaters\Cropped";
+        string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Sweaters\Cropped" + @"\image";
+        int fCount = Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly).Length;
+        int aux = 0;
+        PictureBox[] pb = new PictureBox[50];
+
         public Sweater()
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ControlBox = false;
             this.Text = String.Empty;
             InitializeComponent();
+        }
 
+        private void Sweater_Load(object sender, EventArgs e)
+        {
             try
             {
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Sweaters\Cropped";
-                string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Sweaters\Cropped" + @"\image";
-                int fCount = Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly).Length;
-                int aux = 0;
-                PictureBox[] pb = new PictureBox[50];
                 for (int i = 1; i <= fCount; i++)
                 {
                     string image = path1 + i + "cropped" + ".png";
                     aux = aux + 1;
                     pb[i] = new PictureBox();
+                    pb[i].InitialImage = null;
+                    pb[i].BackgroundImage = null;
+                    pb[i].Image = null;
                     pb[i].Height = 220;
                     pb[i].Width = 245;
                     pb[i].BackgroundImage = Image.FromFile(image);
@@ -39,13 +47,10 @@ namespace Clothes_Pick
                     flowLayoutPanel1.Controls.Add(pb[i]);
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-            
-
         }
-
     }
 }

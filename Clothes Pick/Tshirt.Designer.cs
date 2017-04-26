@@ -1,6 +1,6 @@
 ﻿namespace Clothes_Pick
 {
-    partial class Coat
+    partial class Tshirt
     {
         /// <summary>
         /// Required designer variable.
@@ -34,22 +34,20 @@
             // flowLayoutPanel1
             // 
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(580, 478);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(530, 478);
             this.flowLayoutPanel1.TabIndex = 0;
             // 
-            // Coat
+            // Tshirt
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(580, 478);
+            this.ClientSize = new System.Drawing.Size(530, 478);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Coat";
-            this.Text = "Coat";
-            this.Load += new System.EventHandler(this.Coat_Load);
+            this.Name = "Tshirt";
+            this.Text = "Tshirt";
+            this.Load += new System.EventHandler(this.Tshirt_Load);
             this.ResumeLayout(false);
 
         }

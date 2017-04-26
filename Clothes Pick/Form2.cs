@@ -33,6 +33,7 @@ namespace Clothes_Pick
             Button b5 = new Button();
             Button b6 = new Button();
             Button b7 = new Button();
+            Button b8 = new Button();
 
             child = new Hoodie();
             child2 = new Sweater();
@@ -41,6 +42,7 @@ namespace Clothes_Pick
             child5 = new Jacket();
             child6 = new Skirt();
             child7 = new Coat();
+            child8 = new Tshirt();
 
             control();
 
@@ -58,6 +60,7 @@ namespace Clothes_Pick
         Jacket child5 = new Jacket();
         Skirt child6 = new Skirt();
         Coat child7 = new Coat();
+        Tshirt child8 = new Tshirt();
 
         private void control ()
         {
@@ -201,11 +204,28 @@ namespace Clothes_Pick
             b7.FlatAppearance.MouseDownBackColor = Color.FromArgb(68, 102, 85);
             b7.FlatAppearance.MouseOverBackColor = Color.FromArgb(70, 68, 102, 85);
 
+            Button b8 = new Button();
+            b8.Height = 80;
+            b8.Width = 163;
+            flowLayoutPanel1.Controls.Add(b8);
+            b8.Click += new EventHandler(b8_Click);
+            b8.BackColor = Color.Transparent;
+
+            b8.Font = new System.Drawing.Font("Monotype Corsiva", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            b8.Text = "T shirt";
+            b8.TabStop = false;
+            b8.FlatStyle = FlatStyle.Flat;
+            b8.FlatAppearance.BorderSize = 0;
+            b8.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
+            b8.FlatAppearance.MouseDownBackColor = Color.FromArgb(68, 102, 85);
+            b8.FlatAppearance.MouseOverBackColor = Color.FromArgb(70, 68, 102, 85);
+
+
 
         }
 
         Form1 frm = new Form1();
-        Form3 tshirtsform = new Form3();
+        Form3 Tshirtsform = new Form3();
         PantsForm pantsform = new PantsForm();
         Sweaterform sweaterform = new Sweaterform();
         ShirtForm shirtform = new ShirtForm();
@@ -216,12 +236,16 @@ namespace Clothes_Pick
 
         private void button11_Click(object sender, EventArgs e)
         {
-           // button11.BackColor = Color.Transparent;
+            button11.BackColor = Color.Transparent;
             button11.FlatStyle = FlatStyle.Flat;
             button11.FlatAppearance.BorderSize = 0;
             button11.FlatAppearance.BorderColor = Color.FromArgb(0, 255, 255, 255); //transparent
             button11.FlatAppearance.MouseDownBackColor = Color.FromArgb(68, 102, 85);
             button11.FlatAppearance.MouseOverBackColor = Color.FromArgb(70, 68, 102, 85);
+
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+
             Form Form1 = new Form1();
             Form1.Show();
             this.Hide();
@@ -277,6 +301,10 @@ namespace Clothes_Pick
             }
             else
             {
+
+                if (ActiveMdiChild != null)
+                    ActiveMdiChild.Close();
+
                 Pants child = new Pants();
                 child.MdiParent = this;
                 child.Show();
@@ -294,6 +322,10 @@ namespace Clothes_Pick
             }
             else
             {
+
+                if (ActiveMdiChild != null)
+                    ActiveMdiChild.Close();
+
                 Shirt child = new Shirt();
                 child.MdiParent = this;
                 child.Show();
@@ -311,6 +343,10 @@ namespace Clothes_Pick
             }
             else
             {
+
+                if (ActiveMdiChild != null)
+                    ActiveMdiChild.Close();
+
                 Jacket child = new Jacket();
                 child.MdiParent = this;
                 child.Show();
@@ -357,6 +393,27 @@ namespace Clothes_Pick
                     ActiveMdiChild.Close();
 
                 Coat child = new Coat();
+                child.MdiParent = this;
+                child.Show();
+                child.Location = new Point(0, 160);
+            }
+        }
+
+        protected void b8_Click(object sender, EventArgs e)
+        {
+
+            DialogResult Result = MessageBox.Show("Do you want to add a T shirt to your garderobe?", "Confirmation", MessageBoxButtons.YesNo);
+            if (Result == DialogResult.Yes)
+            {
+                Tshirtsform.Show();
+                this.Hide();
+            }
+            else
+            {
+                if (ActiveMdiChild != null)
+                    ActiveMdiChild.Close();
+
+                Tshirt child = new Tshirt();
                 child.MdiParent = this;
                 child.Show();
                 child.Location = new Point(0, 160);

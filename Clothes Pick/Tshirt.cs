@@ -11,24 +11,21 @@ using System.Windows.Forms;
 
 namespace Clothes_Pick
 {
-    public partial class Shirt : Form
+    public partial class Tshirt : Form
     {
 
-        static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Shirts\Cropped";
-        string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Shirts\Cropped" + @"\image";
+        static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\T-Shirts\Cropped";
+        string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\T-Shirts\Cropped" + @"\image";
         int fCount = Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly).Length;
         int aux = 0;
         PictureBox[] pb = new PictureBox[50];
 
-        public Shirt()
+        public Tshirt()
         {
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.ControlBox = false;
-            this.Text = String.Empty;
             InitializeComponent();
         }
 
-        private void Shirt_Load(object sender, EventArgs e)
+        private void Tshirt_Load(object sender, EventArgs e)
         {
             try
             {

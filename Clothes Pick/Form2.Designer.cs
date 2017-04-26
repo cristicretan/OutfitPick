@@ -68,7 +68,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImage = global::Clothes_Pick.Properties.Resources.ispfrt;
-            this.ClientSize = new System.Drawing.Size(540, 634);
+            this.ClientSize = new System.Drawing.Size(540, 643);
             this.Controls.Add(this.button11);
             this.Controls.Add(this.flowLayoutPanel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

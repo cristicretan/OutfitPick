@@ -30,7 +30,6 @@ namespace Clothes_Pick
         {
             InitializeComponent();
 
-            
 
             button4.TabStop = false;
             button4.FlatStyle = FlatStyle.Flat;

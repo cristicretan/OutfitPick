@@ -291,6 +291,70 @@ namespace Clothes_Pick
             return Colors;
         }
 
+        void TempOverClothes()
+        {
+            foreach(var i in Program.TshirtsPathBelow)
+            {
+                if(Program.pants)
+                {
+                    foreach(var j in Program.PantsPathBelow)
+                    {
+                        string topcolor = GetDominantColor(i, 1);
+                        string pantscolor = GetDominantColor(j, 1);
+
+                        List<string> RightPants = GetRightColor(pantscolor);
+                        List<string> RightTop = GetRightColor(topcolor);
+
+                        foreach(var x in RightPants)
+                        {
+                            foreach(var y in RightTop)
+                            {
+                                if(x == y)
+                                {
+                                    int index1 = Program.PantsPathBelow.IndexOf(j);
+                                    int index2 = Program.TshirtsPathBelow.IndexOf(i);
+
+                                    TempBelow15PantsList.Add(Program.PantsListBelow[index1]);
+                                    TempBelow15TopList.Add(Program.TshirtsListBelow[index2]);
+                                    break;
+                                }
+                            }
+                            break;
+                        }
+                    }
+                }
+                else if(Program.skirt)
+                {
+                    foreach(var j in Program.ShirtsPathBelow)
+                    {
+                        string topcolor = GetDominantColor(i, 1);
+                        string skirtcolor = GetDominantColor(j, 1);
+
+                        List<string> RightSkirt = GetRightColor(skirtcolor);
+                        List<string> RightTop = GetRightColor(topcolor);
+
+                        foreach(var x in RightTop)
+                        {
+                            foreach(var y in RightSkirt)
+                            {
+                                if(x == y)
+                                {
+                                    int index1 = Program.SkirtPathBelow.IndexOf(j);
+                                    int index2 = Program.TshirtsPathBelow.IndexOf(i);
+
+                                    TempBelow15PantsList.Add(Program.SkirtListBelow[index1]);
+                                    TempBelow15TopList.Add(Program.TshirtsListBelow[index2]);
+
+                                    break;
+                                }
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+
         void TempBetweenClothes()
         {
             foreach (var i in Program.PantsPathBelow)
@@ -650,7 +714,6 @@ namespace Clothes_Pick
                     UnderTop.Image = TempBelow15TopList[1];
                     Bot.Image = TempBelow15PantsList[1];
 
-                    MessageBox.Show(TempBelow15TopList.Count + " " + TempBelow15OverTopList.Count + " " + TempBelow15PantsList.Count);
                 }
             }
             else if (Program.Temperature > 15 && Program.Temperature <= 20)
@@ -663,12 +726,24 @@ namespace Clothes_Pick
                     TempBetweenClothes();
                     UnderTop.Image = TempBelow15TopList[1];
                     Bot.Image = TempBelow15PantsList[1];
-
-                    MessageBox.Show(TempBelow15TopList.Count.ToString());
                 }
 
             }
-                Back.TabStop = false;
+            else if(Program.Temperature > 20)
+            {
+                PantsOrSkirt PantsSkirt = new PantsOrSkirt();
+                var dialogresult = PantsSkirt.ShowDialog();
+
+                if(Program.pants || Program.skirt)
+                {
+                    TempOverClothes();
+                    UnderTop.Image = TempBelow15TopList[1];
+                    Bot.Image = TempBelow15PantsList[1];
+                }
+            }
+
+
+            Back.TabStop = false;
             Back.FlatStyle = FlatStyle.Flat;
             Back.FlatAppearance.BorderSize = 0;
             Back.FlatAppearance.MouseOverBackColor = Color.FromArgb(30, 0, 0, 0); // transparent
@@ -682,6 +757,22 @@ namespace Clothes_Pick
         {
             main.Show();
             this.Hide();
+
+            Program.CoatsListBelow.Clear();
+            Program.CoatsPathBelow.Clear();
+            Program.HoodiesListBelow.Clear();
+            Program.HoodiesPathBelow.Clear();
+            Program.JacketsListBelow.Clear();
+            Program.JacketsPathBelow.Clear();
+            Program.PantsListBelow.Clear();
+            Program.PantsPathBelow.Clear();
+            Program.ShirtsListBelow.Clear();
+            Program.ShirtsPathBelow.Clear();
+            Program.SweatersListBelow.Clear();
+            Program.SweatersPathBelow.Clear();
+            Program.TshirtsListBelow.Clear();
+            Program.TshirtsPathBelow.Clear();
+
         }
 
         int index = 1;

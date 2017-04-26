@@ -13,24 +13,34 @@ namespace Clothes_Pick
 {
     public partial class Skirt : Form
     {
+
+        static string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Skirt\Cropped";
+        static string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Skirt\Cropped" + @"\image";
+        int fCount = Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly).Length;
+        int aux = 0;
+        PictureBox[] pb = new PictureBox[50];
+
         public Skirt()
         {
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.ControlBox = false;
             this.Text = String.Empty;
             InitializeComponent();
+        }
+
+        private void Skirt_Load(object sender, EventArgs e)
+        {
             try
             {
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Skirt\Cropped";
-                string path1 = Environment.GetFolderPath(Environment.SpecialFolder.Desktop) + @"\Gallery\Skirt\Cropped" + @"\image";
-                int fCount = Directory.GetFiles(path, "*", SearchOption.TopDirectoryOnly).Length;
-                int aux = 0;
-                PictureBox[] pb = new PictureBox[50];
+
                 for (int i = 1; i <= fCount; i++)
                 {
                     string image = path1 + i + "cropped" + ".png";
                     aux = aux + 1;
                     pb[i] = new PictureBox();
+                    pb[i].InitialImage = null;
+                    pb[i].BackgroundImage = null;
+                    pb[i].Image = null;
                     pb[i].Height = 220;
                     pb[i].Width = 245;
                     pb[i].BackgroundImage = Image.FromFile(image);
@@ -42,7 +52,6 @@ namespace Clothes_Pick
             {
                 MessageBox.Show(ex.ToString());
             }
-            
         }
     }
 }

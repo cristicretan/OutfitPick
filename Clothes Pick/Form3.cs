@@ -52,6 +52,11 @@ namespace Clothes_Pick
         public Form3()
         {
             InitializeComponent();
+
+            int fCount = Directory.GetFiles(path2, "*", SearchOption.TopDirectoryOnly).Length;
+
+            Program.tshirtclicks = fCount;
+
         }
 
         private void Form3_MouseDown(object sender, MouseEventArgs e)

@@ -252,6 +252,12 @@
     <Compile Include="Tshirt.Designer.cs">
       <DependentUpon>Tshirt.cs</DependentUpon>
     </Compile>
+    <Compile Include="TshirtOrShirt.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TshirtOrShirt.Designer.cs">
+      <DependentUpon>TshirtOrShirt.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Coat.resx">
       <DependentUpon>Coat.cs</DependentUpon>
     </EmbeddedResource>
@@ -331,6 +337,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Tshirt.resx">
       <DependentUpon>Tshirt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TshirtOrShirt.resx">
+      <DependentUpon>TshirtOrShirt.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />

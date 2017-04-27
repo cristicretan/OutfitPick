@@ -293,62 +293,129 @@ namespace Clothes_Pick
 
         void TempOverClothes()
         {
-            foreach(var i in Program.TshirtsPathBelow)
+            if(Program.Tshirt)
             {
-                if(Program.pants)
+                foreach (var i in Program.TshirtsPathBelow)
                 {
-                    foreach(var j in Program.PantsPathBelow)
+                    if (Program.pants)
                     {
-                        string topcolor = GetDominantColor(i, 1);
-                        string pantscolor = GetDominantColor(j, 1);
-
-                        List<string> RightPants = GetRightColor(pantscolor);
-                        List<string> RightTop = GetRightColor(topcolor);
-
-                        foreach(var x in RightPants)
+                        foreach (var j in Program.PantsPathBelow)
                         {
-                            foreach(var y in RightTop)
-                            {
-                                if(x == y)
-                                {
-                                    int index1 = Program.PantsPathBelow.IndexOf(j);
-                                    int index2 = Program.TshirtsPathBelow.IndexOf(i);
+                            string topcolor = GetDominantColor(i, 1);
+                            string pantscolor = GetDominantColor(j, 1);
 
-                                    TempBelow15PantsList.Add(Program.PantsListBelow[index1]);
-                                    TempBelow15TopList.Add(Program.TshirtsListBelow[index2]);
-                                    break;
+                            List<string> RightPants = GetRightColor(pantscolor);
+                            List<string> RightTop = GetRightColor(topcolor);
+
+                            foreach (var x in RightPants)
+                            {
+                                foreach (var y in RightTop)
+                                {
+                                    if (x == y)
+                                    {
+                                        int index1 = Program.PantsPathBelow.IndexOf(j);
+                                        int index2 = Program.TshirtsPathBelow.IndexOf(i);
+
+                                        TempBelow15PantsList.Add(Program.PantsListBelow[index1]);
+                                        TempBelow15TopList.Add(Program.TshirtsListBelow[index2]);
+                                        break;
+                                    }
                                 }
+                                break;
                             }
-                            break;
                         }
                     }
-                }
-                else if(Program.skirt)
-                {
-                    foreach(var j in Program.ShirtsPathBelow)
+                    else if (Program.skirt)
                     {
-                        string topcolor = GetDominantColor(i, 1);
-                        string skirtcolor = GetDominantColor(j, 1);
-
-                        List<string> RightSkirt = GetRightColor(skirtcolor);
-                        List<string> RightTop = GetRightColor(topcolor);
-
-                        foreach(var x in RightTop)
+                        foreach (var j in Program.ShirtsPathBelow)
                         {
-                            foreach(var y in RightSkirt)
+                            string topcolor = GetDominantColor(i, 1);
+                            string skirtcolor = GetDominantColor(j, 1);
+
+                            List<string> RightSkirt = GetRightColor(skirtcolor);
+                            List<string> RightTop = GetRightColor(topcolor);
+
+                            foreach (var x in RightTop)
                             {
-                                if(x == y)
+                                foreach (var y in RightSkirt)
                                 {
-                                    int index1 = Program.SkirtPathBelow.IndexOf(j);
-                                    int index2 = Program.TshirtsPathBelow.IndexOf(i);
+                                    if (x == y)
+                                    {
+                                        int index1 = Program.SkirtPathBelow.IndexOf(j);
+                                        int index2 = Program.TshirtsPathBelow.IndexOf(i);
 
-                                    TempBelow15PantsList.Add(Program.SkirtListBelow[index1]);
-                                    TempBelow15TopList.Add(Program.TshirtsListBelow[index2]);
+                                        TempBelow15PantsList.Add(Program.SkirtListBelow[index1]);
+                                        TempBelow15TopList.Add(Program.TshirtsListBelow[index2]);
 
-                                    break;
+                                        break;
+                                    }
                                 }
+                                break;
                             }
-                            break;
+                        } //shirtpath below
+                    } // program.skirt
+                } //tshirt path below
+            } // if tshirt
+            else if(Program.shirt)
+            {
+                foreach(var i in Program.ShirtsPathBelow)
+                {
+                    if(Program.pants)
+                    {
+                        foreach(var j in Program.PantsPathBelow)
+                        {
+                            string topcolor = GetDominantColor(i, 1);
+                            string pantscolor = GetDominantColor(j, 1);
+
+                            List<string> RightTop = GetRightColor(topcolor);
+                            List<string> RightPants = GetRightColor(pantscolor);
+
+                            foreach(var x in RightTop)
+                            {
+                                foreach(var y in RightPants)
+                                {
+                                    if(x == y)
+                                    {
+                                        int index1 = Program.ShirtsPathBelow.IndexOf(i);
+                                        int index2 = Program.PantsPathBelow.IndexOf(j);
+
+                                        TempBelow15TopList.Add(Program.ShirtsListBelow[index1]);
+                                        TempBelow15PantsList.Add(Program.PantsListBelow[index2]);
+
+                                        break;
+                                    }
+                                }
+                                break;
+                            }
+                        }
+                    }
+                    else if(Program.skirt)
+                    {
+                        foreach(var j in Program.SkirtPathBelow)
+                        {
+                            string topcolor = GetDominantColor(i, 1);
+                            string skirtcolor = GetDominantColor(j, 1);
+
+                            List<string> RightTop = GetRightColor(topcolor);
+                            List<string> RightSkirt = GetRightColor(skirtcolor);
+
+                            foreach(var x in RightTop)
+                            {
+                                foreach(var y in RightSkirt)
+                                {
+                                    if(x == y)
+                                    {
+                                        int index1 = Program.ShirtsPathBelow.IndexOf(i);
+                                        int index2 = Program.SkirtPathBelow.IndexOf(j);
+
+                                        TempBelow15TopList.Add(Program.ShirtsListBelow[index1]);
+                                        TempBelow15PantsList.Add(Program.SkirtListBelow[index2]);
+
+                                        break;
+                                    }
+                                }
+                                break;
+                            }
                         }
                     }
                 }
@@ -736,9 +803,17 @@ namespace Clothes_Pick
 
                 if(Program.pants || Program.skirt)
                 {
-                    TempOverClothes();
-                    UnderTop.Image = TempBelow15TopList[1];
-                    Bot.Image = TempBelow15PantsList[1];
+
+                    TshirtOrShirt TshirtShirt = new TshirtOrShirt();
+                    var dialogresult1 = TshirtShirt.ShowDialog();
+
+                    if(Program.Tshirt || Program.shirt)
+                    {
+                        TempOverClothes();
+                        UnderTop.Image = TempBelow15TopList[1];
+                        Bot.Image = TempBelow15PantsList[1];
+                    }
+                    
                 }
             }
 

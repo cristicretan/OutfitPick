@@ -11,6 +11,7 @@ namespace Clothes_Pick
     static class Program
     {
 
+        public static bool Tshirt = false;
         public static bool pants = false; 
         public static bool skirt = false; 
         public static bool coat = false;

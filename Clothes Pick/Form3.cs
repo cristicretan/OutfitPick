@@ -508,7 +508,6 @@ namespace Clothes_Pick
                     Console.WriteLine("Dominant colours for {0}:", inputFile);
                     foreach (Color color in dominantColours)
                     {
-                        MessageBox.Show(closestColor2(clist, color));
                         tshirt_number++;
                         Program.Buffer.Clothes.Add("T-shirt " + tshirt_number.ToString());
                         Program.Buffer.Colors.Add(closestColor2(clist, color));
